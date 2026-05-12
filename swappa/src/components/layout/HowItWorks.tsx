@@ -55,7 +55,7 @@ const SELLER_STEPS = [
   },
   {
     num: '03',
-    title: 'Receive & manage offers',
+    title: 'Manage offers',
     desc: 'Get notified of offers. Accept, reject, or counter directly in WhatsApp.',
     cmd: 'MY OFFERS',
     detail: 'ACCEPT, REJECT, or COUNTER any offer. Full negotiation history tracked.',
@@ -78,64 +78,86 @@ const SELLER_STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section" style={{ background: 'var(--white)' }}>
+    <section id="how-it-works" className="section" style={{ background: 'var(--off)' }}>
       <div className="container">
 
         {/* Header */}
-        <div style={{ marginBottom: 64 }}>
-          <div className="section-label anim-fade-up" style={{ marginBottom: 16 }}>How it works</div>
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-            <h2 className="anim-fade-up d-100" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 800, maxWidth: 520 }}>
-              The entire deal happens<br />
-              <span style={{ color: 'var(--green)' }}>inside WhatsApp</span>
+        <div style={{ marginBottom: 72 }}>
+          <div className="section-label anim-fade-up">How it works</div>
+          <div style={{
+            display: 'flex', alignItems: 'flex-end',
+            justifyContent: 'space-between', flexWrap: 'wrap', gap: 24,
+          }}>
+            <h2 className="anim-fade-up d-100">
+              The entire deal<br />
+              <span style={{
+                background: 'var(--black)', color: 'var(--lime)',
+                padding: '0 8px', borderRadius: 4,
+                display: 'inline-block', lineHeight: 1.1,
+              }}>inside WhatsApp</span>
             </h2>
-            <p className="anim-fade-up d-200" style={{ maxWidth: 380, color: 'var(--ink-2)', fontSize: '1rem', lineHeight: 1.7 }}>
-              No apps to download. No dashboards to learn. Every step — browse, offer, negotiate, pay, confirm — runs through simple WhatsApp commands.
+            <p className="anim-fade-up d-200" style={{
+              maxWidth: 360, color: 'var(--ink-2)',
+              fontSize: '1rem', lineHeight: 1.7,
+              fontFamily: "'Space Grotesk', sans-serif",
+            }}>
+              No apps to download. No dashboards to learn. Every step —
+              browse, offer, negotiate, pay, confirm — runs through simple
+              WhatsApp commands.
             </p>
           </div>
         </div>
 
-        {/* Two tabs */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
-
-          {/* Buyer flow */}
+        {/* Two flow cards */}
+        <div style={{
+          display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20,
+        }} className="flow-grid">
           <FlowCard
             label="For Buyers"
-            badge="badge-green"
+            accentColor="var(--lime)"
+            accentText="var(--lime-dk)"
             steps={BUYER_STEPS}
-            accentColor="var(--green)"
           />
-
-          {/* Seller flow */}
           <FlowCard
             label="For Sellers"
-            badge="badge-amber"
+            accentColor="var(--black)"
+            accentText="var(--lime)"
             steps={SELLER_STEPS}
-            accentColor="var(--amber)"
           />
-
         </div>
 
         {/* Commands quick ref */}
         <div style={{
-          marginTop: 56, background: 'var(--off-white)',
-          border: '1px solid var(--border)', borderRadius: 20,
-          padding: '36px 40px',
+          marginTop: 48,
+          background: 'var(--black)',
+          borderRadius: 20, padding: '36px 40px',
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28 }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--green)">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            <span style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '1rem' }}>All WhatsApp commands</span>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
+          }}>
+            <span style={{
+              fontFamily: "'Syne', sans-serif",
+              fontWeight: 800, fontSize: '0.95rem', color: '#fff',
+              textTransform: 'uppercase', letterSpacing: '-0.01em',
+            }}>All WhatsApp commands</span>
+            <span style={{
+              background: 'var(--lime)', color: 'var(--lime-dk)',
+              fontSize: '0.68rem', fontWeight: 700,
+              padding: '2px 10px', borderRadius: 100,
+              textTransform: 'uppercase', letterSpacing: '0.06em',
+            }}>Quick ref</span>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {[
-              'MENU', 'LISTINGS', 'SELL', 'MY OFFERS', 'MY REQUESTS',
+              'MENU', 'LISTINGS', 'SELL', 'MY OFFERS', 'REQUEST', 'MY REQUESTS',
+              'RESPOND [REQ-ID]', 'CANCEL REQUEST [REQ-ID]',
               'VIEW [ID]', 'BUY [ID]', 'OFFER [ID]',
               'ACCEPT [ID]', 'REJECT [ID]', 'COUNTER [ID] [amount]',
               'CANCEL OFFER [ID]', 'HELP', 'NOTIFICATIONS ON', 'NOTIFICATIONS OFF',
             ].map(cmd => (
-              <span key={cmd} className="cmd">{cmd}</span>
+              <span key={cmd} className="cmd" style={{
+                padding: '4px 12px', fontSize: '0.8rem',
+              }}>{cmd}</span>
             ))}
           </div>
         </div>
@@ -143,53 +165,85 @@ export default function HowItWorks() {
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
-          .flow-grid { grid-template-columns: 1fr !important; }
-        }
+        @media (max-width: 768px) { .flow-grid { grid-template-columns: 1fr !important; } }
       `}</style>
     </section>
   );
 }
 
-function FlowCard({ label, badge, steps, accentColor }: {
+function FlowCard({
+  label, accentColor, accentText, steps,
+}: {
   label: string;
-  badge: string;
-  steps: typeof BUYER_STEPS;
   accentColor: string;
+  accentText: string;
+  steps: typeof BUYER_STEPS;
 }) {
   return (
     <div style={{
-      background: 'var(--white)', border: '1px solid var(--border)',
+      background: 'var(--white)',
+      border: '1.5px solid var(--border)',
       borderRadius: 20, padding: '32px 28px',
     }}>
-      <div style={{ marginBottom: 28 }}>
-        <span className={`badge ${badge}`}>{label}</span>
+      {/* Label */}
+      <div style={{ marginBottom: 32 }}>
+        <span style={{
+          fontFamily: "'Syne', sans-serif",
+          fontWeight: 800, fontSize: '1.1rem',
+          textTransform: 'uppercase', letterSpacing: '-0.01em',
+          background: accentColor, color: accentText,
+          padding: '4px 14px', borderRadius: 100,
+          display: 'inline-block',
+        }}>{label}</span>
       </div>
+
+      {/* Steps */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
         {steps.map((step, i) => (
-          <div key={step.num} style={{ display: 'flex', gap: 16, paddingBottom: i < steps.length - 1 ? 24 : 0 }}>
-            {/* Line + dot */}
+          <div
+            key={step.num}
+            style={{
+              display: 'flex', gap: 20,
+              paddingBottom: i < steps.length - 1 ? 28 : 0,
+            }}
+          >
+            {/* Number column */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div style={{
-                width: 28, height: 28, borderRadius: '50%',
-                background: accentColor === 'var(--green)' ? 'var(--green-lt)' : 'var(--amber-lt)',
+                width: 32, height: 32, borderRadius: 8,
+                background: accentColor, color: accentText,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '0.68rem', fontWeight: 800, fontFamily: 'Syne',
-                color: accentColor, flexShrink: 0,
-              }}>
-                {step.num}
-              </div>
+                fontSize: '0.72rem', fontWeight: 800,
+                fontFamily: "'Syne', sans-serif",
+                flexShrink: 0, letterSpacing: '-0.01em',
+              }}>{step.num}</div>
               {i < steps.length - 1 && (
-                <div style={{ width: 1, flex: 1, background: 'var(--border)', marginTop: 6, marginBottom: 0 }} />
+                <div style={{
+                  width: 2, flex: 1,
+                  background: 'var(--border)',
+                  margin: '6px 0',
+                }} />
               )}
             </div>
+
             {/* Content */}
-            <div style={{ paddingBottom: i < steps.length - 1 ? 4 : 0 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4, flexWrap: 'wrap' }}>
-                <span style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '0.95rem' }}>{step.title}</span>
+            <div style={{ paddingTop: 4, paddingBottom: i < steps.length - 1 ? 4 : 0 }}>
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 8,
+                marginBottom: 6, flexWrap: 'wrap',
+              }}>
+                <span style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontWeight: 800, fontSize: '0.95rem',
+                  color: 'var(--black)', letterSpacing: '-0.01em',
+                }}>{step.title}</span>
                 {step.cmd && <span className="cmd">{step.cmd}</span>}
               </div>
-              <p style={{ fontSize: '0.85rem', color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{step.desc}</p>
+              <p style={{
+                fontSize: '0.85rem', color: 'var(--ink-2)',
+                lineHeight: 1.65, margin: 0,
+                fontFamily: "'Space Grotesk', sans-serif",
+              }}>{step.desc}</p>
             </div>
           </div>
         ))}
