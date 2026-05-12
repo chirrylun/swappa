@@ -19,7 +19,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 16);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -28,48 +28,50 @@ export default function Navbar() {
     <>
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
-        background: scrolled ? 'rgba(255,255,255,0.95)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1.5px solid var(--border)' : '1.5px solid transparent',
-        transition: 'all 0.25s ease',
+        background: scrolled ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.96)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        borderBottom: '1px solid var(--border)',
+        transition: 'box-shadow 0.25s',
+        boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.06)' : 'none',
       }}>
         <div className="container" style={{
           display: 'flex', alignItems: 'center',
-          justifyContent: 'space-between', height: 68,
+          justifyContent: 'space-between', height: 64,
         }}>
 
           {/* Logo */}
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 9 }}>
             <div style={{
-              width: 36, height: 36, background: 'var(--black)',
-              borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: 32, height: 32,
+              background: 'var(--forest)',
+              borderRadius: 8,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
             }}>
-              {/* Simple S-mark */}
-              <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                <path d="M13 5.5C13 3.567 11.433 2 9.5 2H6C3.791 2 2 3.791 2 6s1.791 4 4 4h2c2.209 0 4 1.791 4 4s-1.791 4-4 4H5C3.343 16 2 14.657 2 13" stroke="var(--lime)" strokeWidth="2.2" strokeLinecap="round"/>
+              {/* S wordmark */}
+              <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
+                <path d="M13 5.5C13 3.567 11.433 2 9.5 2H6C3.791 2 2 3.791 2 6s1.791 4 4 4h2c2.209 0 4 1.791 4 4s-1.791 4-4 4H5C3.343 16 2 14.657 2 13"
+                  stroke="var(--lime)" strokeWidth="2.2" strokeLinecap="round"/>
               </svg>
             </div>
             <span style={{
-              fontFamily: "'Syne', sans-serif",
-              fontWeight: 800, fontSize: '1.15rem',
-              color: 'var(--black)', letterSpacing: '-0.04em',
-              textTransform: 'uppercase',
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 800, fontSize: '1.1rem',
+              color: 'var(--black)', letterSpacing: '-0.03em',
             }}>Swappa</span>
           </Link>
 
-          {/* Desktop links */}
-          <div style={{ display: 'flex', gap: 4, alignItems: 'center' }} className="desktop-nav">
+          {/* Desktop nav links */}
+          <div style={{ display: 'flex', gap: 2 }} className="desktop-nav">
             {NAV_LINKS.map(link => (
               <a
                 key={link.label}
                 href={link.href}
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 600, fontSize: '0.88rem',
+                  fontWeight: 500, fontSize: '0.9rem',
                   color: 'var(--ink-2)', textDecoration: 'none',
                   padding: '7px 14px', borderRadius: 8,
-                  transition: 'all 0.15s',
+                  transition: 'color 0.15s, background 0.15s',
                 }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLAnchorElement;
@@ -85,27 +87,25 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {/* Right side */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <div style={{
               display: 'flex', alignItems: 'center', gap: 6,
-              fontSize: '0.78rem', color: 'var(--ink-3)',
-              fontWeight: 600,
+              fontSize: '0.8rem', color: 'var(--ink-3)', fontWeight: 500,
             }} className="desktop-nav">
-              <span className="live-dot" />
-              <span>Live now</span>
+              <span className="live-dot" style={{ background: 'var(--green)' }} />
+              Live marketplace
             </div>
 
             <a
               href="https://wa.me/2347026131523?text=MENU"
               target="_blank" rel="noopener noreferrer"
               className="btn btn-lime"
-              style={{ padding: '10px 22px', fontSize: '0.88rem', gap: 7 }}
+              style={{ padding: '10px 22px', fontSize: '0.9rem' }}
             >
-              {WA_ICON} Start trading
+              {WA_ICON} Open WhatsApp
             </a>
 
-            {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(o => !o)}
               style={{
@@ -116,7 +116,7 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 {mobileOpen
                   ? <><path d="M18 6L6 18M6 6l12 12" /></>
                   : <><path d="M3 7h18M3 12h18M3 17h18" /></>}
@@ -125,24 +125,22 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile drawer */}
+        {/* Mobile menu */}
         {mobileOpen && (
           <div style={{
             background: 'var(--white)',
-            borderTop: '1.5px solid var(--border)',
-            padding: '20px 24px 28px',
+            borderTop: '1px solid var(--border)',
+            padding: '16px 24px 24px',
           }}>
             {NAV_LINKS.map(link => (
               <a
                 key={link.label} href={link.href}
                 onClick={() => setMobileOpen(false)}
                 style={{
-                  display: 'block', padding: '13px 0',
-                  fontFamily: "'Syne', sans-serif",
-                  fontWeight: 700, fontSize: '1.05rem',
+                  display: 'block', padding: '12px 0',
+                  fontWeight: 600, fontSize: '1rem',
                   color: 'var(--ink)', textDecoration: 'none',
-                  borderBottom: '1.5px solid var(--border)',
-                  textTransform: 'uppercase', letterSpacing: '-0.01em',
+                  borderBottom: '1px solid var(--border)',
                 }}
               >{link.label}</a>
             ))}
@@ -150,9 +148,9 @@ export default function Navbar() {
               href="https://wa.me/2347026131523?text=MENU"
               target="_blank" rel="noopener noreferrer"
               className="btn btn-lime"
-              style={{ marginTop: 20, width: '100%', justifyContent: 'center' }}
+              style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}
             >
-              {WA_ICON} Start trading
+              {WA_ICON} Open WhatsApp
             </a>
           </div>
         )}

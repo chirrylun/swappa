@@ -6,6 +6,12 @@ const WA_ICON = (
   </svg>
 );
 
+/* Small trust signals like Wise's "4.8 on App Store" */
+const TRUST_SIGNALS = [
+  { icon: '⭐', text: '4.9 on WhatsApp', sub: '2,400+ reviews' },
+  { icon: '🔒', text: 'Escrow protected', sub: 'Every transaction' },
+];
+
 export default function Hero() {
   return (
     <section style={{
@@ -14,228 +20,212 @@ export default function Hero() {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      paddingTop: 68,
-      position: 'relative',
-      overflow: 'hidden',
+      paddingTop: 64,
     }}>
-
-      {/* ── Background accent block (like Wise's section color breaks) ── */}
-      <div style={{
-        position: 'absolute',
-        top: '50%', right: -80,
-        width: 520, height: 520,
-        background: 'var(--lime)',
-        borderRadius: '50%',
-        transform: 'translateY(-50%)',
-        zIndex: 0,
-        opacity: 0.12,
-        filter: 'blur(80px)',
-      }} />
-
-      <div className="container" style={{ padding: '80px 40px', position: 'relative', zIndex: 1 }}>
+      <div className="container" style={{ padding: '80px 40px 72px' }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: 64,
+          gap: 72,
           alignItems: 'center',
         }} className="hero-grid">
 
-          {/* Left — copy */}
+          {/* ── Left: copy ── */}
           <div>
-            {/* Live pill */}
-            <div className="anim-fade-up d-1" style={{ marginBottom: 32 }}>
-              <span style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: 'var(--black)', color: 'var(--lime)',
-                fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.06em',
-                textTransform: 'uppercase', padding: '6px 16px',
-                borderRadius: 100,
-              }}>
-                <span className="live-dot" style={{ background: 'var(--lime)' }} />
-                WhatsApp-native marketplace
-              </span>
+            {/* Trust signals row — like Wise's app store ratings */}
+            <div className="anim-fade-up d-1" style={{
+              display: 'flex', gap: 24, marginBottom: 32, flexWrap: 'wrap',
+            }}>
+              {TRUST_SIGNALS.map(t => (
+                <div key={t.text} style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                  <span style={{ fontSize: '1rem' }}>{t.icon}</span>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--ink)', lineHeight: 1.2 }}>
+                      {t.text}
+                    </div>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--ink-3)', fontWeight: 400 }}>
+                      {t.sub}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Big headline — Wise-style brutal uppercase */}
-            <h1 className="anim-fade-up d-2" style={{
-              marginBottom: 28,
-              fontFamily: "'Syne', sans-serif",
-            }}>
+            {/* Headline — Wise-style: huge, heavy, black, no transforms */}
+            <h1 className="anim-fade-up d-2" style={{ marginBottom: 24 }}>
               Buy &amp; sell<br />
-              <span style={{
-                background: 'var(--lime)',
-                color: 'var(--lime-dk)',
-                padding: '0 8px',
-                borderRadius: 4,
-                display: 'inline-block',
-                lineHeight: 1.08,
-              }}>digital</span><br />
-              assets.
+              digital assets<br />
+              for less.
             </h1>
 
             <p className="anim-fade-up d-3" style={{
               fontSize: '1.1rem', color: 'var(--ink-2)',
-              maxWidth: 440, lineHeight: 1.75,
-              fontWeight: 400, marginBottom: 40,
-              fontFamily: "'Space Grotesk', sans-serif",
+              maxWidth: 420, lineHeight: 1.75,
+              fontWeight: 400, marginBottom: 36,
             }}>
-              Trade Google Ads accounts, Meta pages, AdSense sites,
-              Play Console, gift cards and social accounts —
-              protected by escrow, entirely inside WhatsApp.
+              Trade Google Ads accounts, Meta pages, AdSense sites and
+              social accounts — protected by escrow, entirely inside WhatsApp.
             </p>
 
-            {/* CTAs */}
+            {/* CTAs — Wise uses pill lime + ghost link side by side */}
             <div className="anim-fade-up d-4" style={{
               display: 'flex', alignItems: 'center',
-              gap: 12, flexWrap: 'wrap', marginBottom: 52,
+              gap: 20, flexWrap: 'wrap', marginBottom: 44,
             }}>
               <a
                 href="https://wa.me/2347026131523?text=MENU"
                 target="_blank" rel="noopener noreferrer"
                 className="btn btn-lime"
+                style={{ fontSize: '1rem', padding: '15px 32px', gap: 9 }}
               >
                 {WA_ICON} Open WhatsApp
               </a>
-              <a href="#how-it-works" className="btn btn-outline">
-                See how it works →
+              <a href="#how-it-works" className="btn btn-ghost">
+                See how it works
               </a>
             </div>
 
-            {/* Trust line */}
+            {/* 3 trust micro-pills — Wise has these below CTAs */}
             <div className="anim-fade-up d-5" style={{
-              display: 'flex', gap: 0, flexWrap: 'wrap',
-              borderTop: '1.5px solid var(--border)', paddingTop: 24,
+              display: 'flex', flexWrap: 'wrap', gap: 10,
             }}>
               {[
-                { icon: '🔒', text: 'Escrow protected' },
-                { icon: '✅', text: 'Verified listings' },
-                { icon: '⚡', text: '< 2 min response' },
-              ].map((item, i) => (
-                <span key={item.text} style={{
-                  fontSize: '0.82rem', color: 'var(--ink-3)',
-                  fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6,
-                  paddingRight: 20, marginRight: i < 2 ? 20 : 0,
-                  borderRight: i < 2 ? '1.5px solid var(--border)' : 'none',
-                }}>
-                  {item.icon} {item.text}
-                </span>
+                '✅ Verified listings',
+                '🔒 Escrow on every deal',
+                '⚡ 48hr dispute resolution',
+              ].map(t => (
+                <span key={t} style={{
+                  fontSize: '0.8rem', color: 'var(--ink-2)',
+                  fontWeight: 500, background: 'var(--off)',
+                  border: '1px solid var(--border)',
+                  padding: '5px 12px', borderRadius: 100,
+                }}>{t}</span>
               ))}
             </div>
           </div>
 
-          {/* Right — WhatsApp mockup */}
+          {/* ── Right: WhatsApp mockup card — Wise's right-side calculator card ── */}
           <div className="anim-fade-up d-3 hero-mockup-wrap"
             style={{ display: 'flex', justifyContent: 'center' }}>
-
-            {/* Outer glow / lime card background */}
-            <div style={{
-              background: 'var(--lime)',
-              borderRadius: 36,
-              padding: 12,
-              display: 'inline-block',
-            }} className="anim-float">
+            <div className="anim-float" style={{
+              width: '100%', maxWidth: 360,
+              borderRadius: 24,
+              border: '1px solid var(--border)',
+              overflow: 'hidden',
+              boxShadow: '0 8px 48px rgba(0,0,0,0.10)',
+              background: '#e5ddd5',
+            }}>
+              {/* Chat header — forest green like Wise's dark green panels */}
               <div style={{
-                width: '100%', maxWidth: 340,
-                borderRadius: 26,
-                overflow: 'hidden',
-                boxShadow: '0 40px 80px rgba(0,0,0,0.18)',
-                background: '#e5ddd5',
+                background: 'var(--forest)',
+                padding: '16px 20px',
+                display: 'flex', alignItems: 'center', gap: 12,
               }}>
-                {/* Chat header */}
                 <div style={{
-                  background: 'var(--black)', padding: '16px 20px',
-                  display: 'flex', alignItems: 'center', gap: 12,
-                }}>
+                  width: 44, height: 44, borderRadius: '50%',
+                  background: 'var(--lime)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '1.2rem',
+                }}>🛍️</div>
+                <div>
+                  <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.93rem' }}>
+                    Swappa Market
+                  </div>
                   <div style={{
-                    width: 44, height: 44, borderRadius: '50%',
-                    background: 'var(--lime)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '1.2rem',
-                  }}>🛍️</div>
-                  <div>
-                    <div style={{
-                      color: '#fff', fontWeight: 800, fontSize: '0.95rem',
-                      fontFamily: "'Syne', sans-serif",
-                    }}>Swappa Market</div>
-                    <div style={{
-                      color: 'rgba(255,255,255,0.5)', fontSize: '0.72rem',
-                      display: 'flex', alignItems: 'center', gap: 5,
-                    }}>
-                      <span style={{
-                        width: 6, height: 6, background: 'var(--lime)',
-                        borderRadius: '50%', display: 'inline-block',
-                      }} />
-                      Online now
+                    color: 'rgba(255,255,255,0.55)', fontSize: '0.72rem',
+                    display: 'flex', alignItems: 'center', gap: 5,
+                  }}>
+                    <span style={{
+                      width: 6, height: 6, background: 'var(--lime)',
+                      borderRadius: '50%', display: 'inline-block',
+                    }} />
+                    Online now
+                  </div>
+                </div>
+              </div>
+
+              {/* Messages */}
+              <div style={{ padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ maxWidth: 280 }}>
+                  <div style={{
+                    background: '#fff', borderRadius: '12px 12px 12px 2px',
+                    padding: '12px 14px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+                  }}>
+                    <div style={{ fontWeight: 700, fontSize: '0.87rem', marginBottom: 8 }}>
+                      👋 Welcome to Swappa!
                     </div>
+                    <div style={{ color: 'var(--ink-2)', fontSize: '0.82rem', marginBottom: 10 }}>
+                      What would you like to do?
+                    </div>
+                    {['🔍 Browse listings', '💰 Sell an account', '📣 Request an asset'].map(opt => (
+                      <div key={opt} style={{
+                        background: 'var(--off)', borderRadius: 8,
+                        border: '1px solid var(--border)',
+                        padding: '5px 10px', fontSize: '0.8rem',
+                        fontWeight: 500, marginBottom: 4,
+                      }}>{opt}</div>
+                    ))}
+                    <div className="wa-time">09:41 AM ✓✓</div>
                   </div>
                 </div>
 
-                {/* Messages */}
-                <div style={{ padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  <div style={{ maxWidth: 280 }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                  <div className="wa-bubble-out" style={{ padding: '9px 14px' }}>
+                    <span className="cmd">LISTINGS</span>
+                    <div className="wa-time">09:41 AM ✓✓</div>
+                  </div>
+                </div>
+
+                {/* Listing card */}
+                <div style={{ maxWidth: 290 }}>
+                  <div style={{
+                    background: '#fff', borderRadius: '12px 12px 12px 2px',
+                    padding: '12px 14px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+                  }}>
+                    <div style={{ fontWeight: 700, fontSize: '0.85rem', marginBottom: 4 }}>
+                      🎯 Google Ads Account
+                    </div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--ink-3)', marginBottom: 10 }}>
+                      2yr · $4,200 spent · Nigeria · ✅ Clean
+                    </div>
                     <div style={{
-                      background: '#fff', borderRadius: '12px 12px 12px 2px',
-                      padding: '12px 14px', boxShadow: '0 1px 4px rgba(0,0,0,0.07)',
+                      display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                     }}>
-                      <div style={{
-                        fontWeight: 800, fontSize: '0.88rem', marginBottom: 8,
-                        fontFamily: "'Syne', sans-serif",
-                      }}>👋 Welcome to Swappa!</div>
-                      <div style={{ color: 'var(--ink-2)', fontSize: '0.82rem', marginBottom: 10 }}>
-                        What would you like to do?
-                      </div>
-                      {['🔍 Browse listings', '💰 Sell an account', '📣 Request an asset'].map(opt => (
-                        <div key={opt} style={{
-                          background: '#f2f2f2', borderRadius: 7,
-                          padding: '5px 9px', fontSize: '0.8rem', fontWeight: 600, marginBottom: 4,
-                        }}>{opt}</div>
-                      ))}
-                      <div className="wa-time">09:41 AM ✓✓</div>
+                      <span style={{
+                        fontWeight: 800, fontSize: '1rem',
+                        color: 'var(--forest)',
+                      }}>₦185,000</span>
+                      <span className="cmd" style={{ fontSize: '0.7rem' }}>VIEW ADS-4821</span>
                     </div>
+                    <div className="wa-time">09:41 AM ✓✓</div>
                   </div>
+                </div>
 
-                  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <div className="wa-bubble-out" style={{ padding: '9px 14px' }}>
-                      <span className="cmd">LISTINGS</span>
-                      <div className="wa-time">09:41 AM ✓✓</div>
-                    </div>
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                  <div className="wa-bubble-out" style={{ padding: '9px 14px' }}>
+                    <span className="cmd">BUY ADS-4821</span>
+                    <div className="wa-time">09:42 AM ✓✓</div>
                   </div>
+                </div>
+              </div>
 
-                  <div style={{ maxWidth: 285 }}>
-                    <div style={{
-                      background: '#fff', borderRadius: '12px 12px 12px 2px',
-                      padding: '12px 14px', boxShadow: '0 1px 4px rgba(0,0,0,0.07)',
-                    }}>
-                      <div style={{
-                        fontWeight: 800, fontSize: '0.84rem', marginBottom: 5,
-                        fontFamily: "'Syne', sans-serif",
-                      }}>🎯 Google Ads Account</div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--ink-3)', marginBottom: 9 }}>
-                        2yr · $4,200 spent · Nigeria · ✅ Clean
-                      </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span style={{
-                          fontWeight: 800, color: 'var(--lime-dk)',
-                          background: 'var(--lime)', padding: '1px 8px',
-                          borderRadius: 4, fontSize: '0.95rem',
-                        }}>₦185,000</span>
-                        <span className="cmd" style={{ fontSize: '0.7rem' }}>VIEW ADS-4821</span>
-                      </div>
-                      <div className="wa-time">09:41 AM ✓✓</div>
-                    </div>
-                  </div>
-
-                  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <div className="wa-bubble-out" style={{ padding: '9px 14px' }}>
-                      <span className="cmd">BUY ADS-4821</span>
-                      <div className="wa-time">09:42 AM ✓✓</div>
-                    </div>
-                  </div>
+              {/* Bottom bar — mimics Wise's "Send money" pill button at bottom */}
+              <div style={{
+                padding: '12px 14px 14px',
+                background: 'var(--off)',
+                borderTop: '1px solid var(--border)',
+              }}>
+                <div style={{
+                  background: 'var(--lime)', color: 'var(--forest)',
+                  fontWeight: 700, fontSize: '0.88rem',
+                  textAlign: 'center', padding: '11px',
+                  borderRadius: 100, cursor: 'pointer',
+                }}>
+                  Start trading on WhatsApp →
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
