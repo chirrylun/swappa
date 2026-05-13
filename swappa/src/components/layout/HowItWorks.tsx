@@ -11,54 +11,54 @@ const WA_SVG = (
 /* ─── Plain monochrome SVG icons ─────────────────────────── */
 const ICONS = {
   search: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
     </svg>
   ),
   eye: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
     </svg>
   ),
   messageSquare: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
     </svg>
   ),
   lock: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
     </svg>
   ),
   checkCircle: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
     </svg>
   ),
   upload: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/>
       <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
     </svg>
   ),
   shield: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
     </svg>
   ),
   inbox: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/>
       <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
     </svg>
   ),
   key: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
     </svg>
   ),
   dollarSign: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
     </svg>
   ),
@@ -66,28 +66,28 @@ const ICONS = {
 
 /* ─── Step data ──────────────────────────────────────────── */
 const BUYER_STEPS = [
-  { num: '01', icon: ICONS.search,       title: 'Browse listings',  cmd: 'LISTINGS',      desc: 'Type LISTINGS to see all verified assets by category — Google Ads, Meta, gift cards and more.' },
-  { num: '02', icon: ICONS.eye,          title: 'View a listing',   cmd: 'VIEW ADS-4821',  desc: 'See full details — spend history, account age, seller rating and verified status.' },
-  { num: '03', icon: ICONS.messageSquare,title: 'Make an offer',    cmd: 'OFFER ADS-4821', desc: 'Buy at list price or negotiate. The offer engine supports counter-offers; seller has 72 hours.' },
-  { num: '04', icon: ICONS.lock,         title: 'Pay into escrow',  cmd: 'BUY ADS-4821',   desc: 'Funds are held safely until you confirm access. Your money is never at risk.' },
-  { num: '05', icon: ICONS.checkCircle,  title: 'Confirm & done',   cmd: null,             desc: '48 hours to verify credentials. Confirm, seller gets paid instantly.' },
+  { num: '01', icon: ICONS.search,        title: 'Browse listings', cmd: 'LISTINGS',       desc: 'Type LISTINGS to see all verified assets by category — Google Ads, Meta, gift cards and more.' },
+  { num: '02', icon: ICONS.eye,           title: 'View a listing',  cmd: 'VIEW ADS-4821',  desc: 'See full details — spend history, account age, seller rating and verified status.' },
+  { num: '03', icon: ICONS.messageSquare, title: 'Make an offer',   cmd: 'OFFER ADS-4821', desc: 'Buy at list price or negotiate. The offer engine supports counter-offers; seller has 72 hours.' },
+  { num: '04', icon: ICONS.lock,          title: 'Pay into escrow', cmd: 'BUY ADS-4821',   desc: 'Funds are held safely until you confirm access. Your money is never at risk.' },
+  { num: '05', icon: ICONS.checkCircle,   title: 'Confirm & done',  cmd: null,             desc: '48 hours to verify credentials. Confirm, seller gets paid instantly.' },
 ];
 
 const SELLER_STEPS = [
-  { num: '01', icon: ICONS.upload,      title: 'List your asset',  cmd: 'SELL',        desc: 'Type SELL and follow the prompts. Upload screenshots for our team to verify.' },
-  { num: '02', icon: ICONS.shield,      title: 'Get verified',     cmd: null,          desc: 'Admin review within 24 hours. Priority review available. Rejected? Fix and resubmit in minutes.' },
-  { num: '03', icon: ICONS.inbox,       title: 'Manage offers',    cmd: 'MY OFFERS',   desc: 'Accept, reject or counter any offer — all inside WhatsApp. Full negotiation history tracked.' },
-  { num: '04', icon: ICONS.key,         title: 'Transfer access',  cmd: null,          desc: 'Our team confirms escrow receipt before you share credentials. Completely protected.' },
-  { num: '05', icon: ICONS.dollarSign,  title: 'Get paid',         cmd: null,          desc: 'Buyer confirms, funds release immediately to your preferred payment method.' },
+  { num: '01', icon: ICONS.upload,     title: 'List your asset', cmd: 'SELL',      desc: 'Type SELL and follow the prompts. Upload screenshots for our team to verify.' },
+  { num: '02', icon: ICONS.shield,     title: 'Get verified',    cmd: null,        desc: 'Admin review within 24 hours. Priority review available. Rejected? Fix and resubmit in minutes.' },
+  { num: '03', icon: ICONS.inbox,      title: 'Manage offers',   cmd: 'MY OFFERS', desc: 'Accept, reject or counter any offer — all inside WhatsApp. Full negotiation history tracked.' },
+  { num: '04', icon: ICONS.key,        title: 'Transfer access', cmd: null,        desc: 'Our team confirms escrow receipt before you share credentials. Completely protected.' },
+  { num: '05', icon: ICONS.dollarSign, title: 'Get paid',        cmd: null,        desc: 'Buyer confirms, funds release immediately to your preferred payment method.' },
 ];
 
 /* ─── Commands ───────────────────────────────────────────── */
 const COMMAND_GROUPS = [
-  { label: 'Browse',   color: '#163300', cmds: ['MENU', 'LISTINGS', 'VIEW [ID]'] },
-  { label: 'Buy',      color: '#1a4a00', cmds: ['BUY [ID]', 'OFFER [ID]', 'ACCEPT [ID]', 'REJECT [ID]', 'COUNTER [ID] [amt]', 'CANCEL OFFER [ID]'] },
-  { label: 'Sell',     color: '#0f2d00', cmds: ['SELL', 'MY OFFERS'] },
-  { label: 'Requests', color: '#163300', cmds: ['REQUEST', 'MY REQUESTS', 'RESPOND [REQ-ID]', 'CANCEL REQUEST [REQ-ID]'] },
-  { label: 'Settings', color: '#1a4a00', cmds: ['HELP', 'NOTIFICATIONS ON', 'NOTIFICATIONS OFF'] },
+  { label: 'Browse',   cmds: ['MENU', 'LISTINGS', 'VIEW [ID]'] },
+  { label: 'Buy',      cmds: ['BUY [ID]', 'OFFER [ID]', 'ACCEPT [ID]', 'REJECT [ID]', 'COUNTER [ID] [amt]', 'CANCEL OFFER [ID]'] },
+  { label: 'Sell',     cmds: ['SELL', 'MY OFFERS'] },
+  { label: 'Requests', cmds: ['REQUEST', 'MY REQUESTS', 'RESPOND [REQ-ID]', 'CANCEL REQUEST [REQ-ID]'] },
+  { label: 'Settings', cmds: ['HELP', 'NOTIFICATIONS ON', 'NOTIFICATIONS OFF'] },
 ];
 
 /* ─── Arrow button ───────────────────────────────────────── */
@@ -98,12 +98,11 @@ function ArrowBtn({ dir, onClick, disabled }: { dir: 'left' | 'right'; onClick: 
       disabled={disabled}
       style={{
         width: 44, height: 44, borderRadius: '50%',
-        background: disabled ? 'var(--off)' : 'var(--lime)',
+        background: disabled ? 'var(--surface)' : 'var(--lime)',
         border: '1.5px solid ' + (disabled ? 'var(--border)' : 'transparent'),
         cursor: disabled ? 'default' : 'pointer',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        transition: 'all 0.18s',
-        flexShrink: 0,
+        transition: 'all 0.18s', flexShrink: 0,
         color: disabled ? 'var(--ink-3)' : 'var(--forest)',
       }}
     >
@@ -120,8 +119,7 @@ function StepCard({ step, bg, dark }: { step: typeof BUYER_STEPS[0]; bg: string;
   const descC  = dark ? 'rgba(255,255,255,0.58)' : 'var(--ink-2)';
   const iconBg = dark ? 'rgba(159,232,112,0.12)' : 'rgba(22,51,0,0.07)';
   const iconC  = dark ? 'var(--lime)' : 'var(--forest)';
-  const numC   = dark ? 'rgba(255,255,255,0.07)' : 'rgba(22,51,0,0.06)';
-  const numTC  = dark ? 'rgba(255,255,255,0.22)' : 'rgba(22,51,0,0.22)';
+  const numTC  = dark ? 'rgba(255,255,255,0.15)' : 'rgba(22,51,0,0.18)';
 
   return (
     <div style={{
@@ -130,7 +128,6 @@ function StepCard({ step, bg, dark }: { step: typeof BUYER_STEPS[0]; bg: string;
       display: 'flex', flexDirection: 'column', gap: 14,
       position: 'relative', overflow: 'hidden',
     }}>
-      {/* Ghost step number */}
       <div style={{
         position: 'absolute', top: 12, right: 18,
         fontWeight: 900, fontSize: '5rem', lineHeight: 1,
@@ -138,9 +135,8 @@ function StepCard({ step, bg, dark }: { step: typeof BUYER_STEPS[0]; bg: string;
         fontFamily: 'var(--font-display), system-ui, sans-serif',
       }}>{step.num}</div>
 
-      {/* Icon */}
       <div style={{
-        width: 48, height: 48, borderRadius: 14,
+        width: 44, height: 44, borderRadius: 12,
         background: iconBg, color: iconC,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         flexShrink: 0,
@@ -203,116 +199,132 @@ function StepCarousel({ steps, bg, dark, label, labelStyle }: {
 /* ─── Commands section ───────────────────────────────────── */
 function CommandsSection() {
   return (
-    <div style={{
-      marginTop: 72,
-      background: 'var(--black)',
-      borderRadius: 28,
-      padding: '48px 48px 52px',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
-      {/* Subtle lime glow top-left */}
-      <div style={{
-        position: 'absolute', top: -80, left: -80,
-        width: 320, height: 320,
-        background: 'radial-gradient(circle, rgba(159,232,112,0.12) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
+    <div style={{ marginTop: 72 }}>
 
-      {/* Header row */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <div style={{
-            width: 36, height: 36, borderRadius: 10,
-            background: 'rgba(159,232,112,0.12)', color: 'var(--lime)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 8, flexShrink: 0,
-          }}>{WA_SVG}</div>
-          <div>
-            <h3 style={{ color: '#fff', fontWeight: 800, fontSize: '1.1rem', marginBottom: 2 }}>
-              Command reference
-            </h3>
-            <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', margin: 0 }}>
-              Everything runs through WhatsApp — no app needed
-            </p>
-          </div>
+      {/* Header */}
+      <div style={{
+        display: 'flex', alignItems: 'flex-end',
+        justifyContent: 'space-between', flexWrap: 'wrap',
+        gap: 16, marginBottom: 28,
+      }}>
+        <div>
+          <span style={{
+            display: 'block', fontSize: '0.72rem', fontWeight: 700,
+            textTransform: 'uppercase', letterSpacing: '0.08em',
+            color: 'var(--ink-3)', marginBottom: 10,
+          }}>Quick reference</span>
+          <h3 style={{
+            fontWeight: 800, fontSize: '1.35rem', color: 'var(--black)',
+            letterSpacing: '-0.02em', margin: 0,
+          }}>
+            Every command, at a glance
+          </h3>
         </div>
         <a
-          href="https://wa.me/2347026131523?text=MENU"
+          href="https://wa.me/2347026131523?text=HELP"
           target="_blank" rel="noopener noreferrer"
           style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'var(--lime)', color: 'var(--forest)',
+            background: 'var(--forest)', color: 'var(--lime)',
             fontFamily: 'var(--font-display), system-ui, sans-serif',
-            fontWeight: 700, fontSize: '0.88rem',
-            padding: '11px 24px', borderRadius: 100,
-            textDecoration: 'none', border: 'none', cursor: 'pointer',
-            transition: 'background 0.18s',
+            fontWeight: 700, fontSize: '0.85rem',
+            padding: '11px 22px', borderRadius: 100,
+            textDecoration: 'none', whiteSpace: 'nowrap',
           }}
         >
-          Try it live →
+          <span style={{ width: 16, height: 16, display: 'inline-block', flexShrink: 0 }}>{WA_SVG}</span>
+          Type HELP on WhatsApp
         </a>
       </div>
 
-      {/* Command groups — horizontal scrollable rows with vertical group labels */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+      {/* Command table — white card, forest left rail, clean rows */}
+      <div style={{
+        background: 'var(--white)',
+        border: '1px solid var(--border)',
+        borderRadius: 20,
+        overflow: 'hidden',
+      }}>
         {COMMAND_GROUPS.map((group, gi) => (
           <div
             key={group.label}
             style={{
               display: 'grid',
-              gridTemplateColumns: '100px 1fr',
-              gap: 0,
-              borderTop: gi === 0 ? '1px solid rgba(255,255,255,0.07)' : 'none',
-              borderBottom: '1px solid rgba(255,255,255,0.07)',
-              padding: '20px 0',
-              alignItems: 'center',
+              gridTemplateColumns: '130px 1fr',
+              borderBottom: gi < COMMAND_GROUPS.length - 1 ? '1px solid var(--border)' : 'none',
             }}
+            className="cmd-row"
           >
-            {/* Group label — left column, vertically centered */}
+            {/* Left: group label — alternating forest tones */}
             <div style={{
-              fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase',
-              letterSpacing: '0.1em', color: 'var(--lime)',
-              paddingRight: 24,
-            }}>{group.label}</div>
+              background: gi % 2 === 0 ? 'var(--forest)' : 'var(--forest-lt)',
+              display: 'flex', alignItems: 'center',
+              padding: '20px 22px',
+              borderRight: '3px solid var(--lime)',
+            }}>
+              <span style={{
+                fontSize: '0.65rem', fontWeight: 800,
+                textTransform: 'uppercase', letterSpacing: '0.1em',
+                color: 'var(--lime)',
+                fontFamily: 'var(--font-display), system-ui, sans-serif',
+              }}>{group.label}</span>
+            </div>
 
-            {/* Commands — pill row */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {/* Right: command pills */}
+            <div style={{
+              display: 'flex', flexWrap: 'wrap', gap: 8,
+              padding: '18px 22px', alignItems: 'center',
+              background: 'var(--white)',
+            }}>
               {group.cmds.map(cmd => (
                 <span
                   key={cmd}
+                  className="cmd-pill"
                   style={{
                     fontFamily: "'Courier New', monospace",
-                    fontSize: '0.78rem', fontWeight: 600,
-                    color: 'rgba(255,255,255,0.82)',
-                    background: 'rgba(255,255,255,0.05)',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    padding: '6px 14px', borderRadius: 8,
+                    fontSize: '0.77rem', fontWeight: 600,
+                    color: 'var(--forest)',
+                    background: 'var(--lime-lt)',
+                    border: '1px solid var(--border-dk)',
+                    padding: '5px 13px', borderRadius: 8,
                     display: 'inline-block', lineHeight: 1.4,
-                    transition: 'background 0.15s, border-color 0.15s, color 0.15s',
-                    cursor: 'default',
+                    whiteSpace: 'nowrap', cursor: 'default',
+                    transition: 'background 0.15s, border-color 0.15s, transform 0.12s',
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLElement).style.background = 'rgba(159,232,112,0.1)';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(159,232,112,0.3)';
-                    (e.currentTarget as HTMLElement).style.color = 'var(--lime)';
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background = 'var(--lime)';
+                    el.style.borderColor = 'rgba(22,51,0,0.3)';
+                    el.style.transform = 'translateY(-1px)';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.05)';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)';
-                    (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.82)';
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background = 'var(--lime-lt)';
+                    el.style.borderColor = 'var(--border-dk)';
+                    el.style.transform = 'translateY(0)';
                   }}
                 >{cmd}</span>
               ))}
             </div>
           </div>
         ))}
-      </div>
 
-      {/* Bottom footnote */}
-      <p style={{ marginTop: 28, fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', margin: '28px 0 0' }}>
-        Square brackets indicate a variable — replace with the actual listing ID or value.{' '}
-        <span style={{ color: 'rgba(255,255,255,0.5)' }}>Type <span style={{ color: 'var(--lime)', fontFamily: 'monospace' }}>HELP</span> on WhatsApp for a live guide.</span>
-      </p>
+        {/* Footer row */}
+        <div style={{
+          padding: '13px 22px',
+          background: 'var(--off)',
+          borderTop: '1px solid var(--border)',
+          display: 'flex', alignItems: 'center', gap: 8,
+        }}>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <span style={{ fontSize: '0.73rem', color: 'var(--ink-3)', fontWeight: 500 }}>
+            Square brackets are variables — replace with the actual listing ID or value.
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
@@ -361,6 +373,12 @@ export default function HowItWorks() {
         <CommandsSection />
 
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .cmd-row { grid-template-columns: 90px 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }

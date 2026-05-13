@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/NavBar";
 import HowItWorks from "@/components/layout/HowItWorks";
 import AssetCategories from "@/components/layout/AssetCategories";
 import TickerStats from "@/components/layout/TickerStats";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AssetCategories />
       <TickerStats />
       <Navbar />
+      <Footer/>
     </main>
   );
 }
