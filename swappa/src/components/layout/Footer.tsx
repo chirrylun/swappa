@@ -105,7 +105,7 @@ export default function Footer() {
             display: 'grid',
             gridTemplateColumns: '220px 1fr 1fr 1fr 1fr',
             gap: 48, alignItems: 'start',
-          }} className="footer-grid">
+          }} className="swappa-footer-grid">
 
             {/* Brand column */}
             <div>
@@ -236,13 +236,13 @@ export default function Footer() {
 
       <style>{`
         @media (max-width: 1024px) {
-          .footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
+          .swappa-footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
         }
         @media (max-width: 640px) {
-          .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+          .swappa-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
         }
         @media (max-width: 420px) {
-          .footer-grid { grid-template-columns: 1fr !important; }
+          .swappa-footer-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </footer>
