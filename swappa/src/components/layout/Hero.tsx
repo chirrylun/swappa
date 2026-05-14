@@ -85,7 +85,7 @@ export default function Hero() {
               gap: 20, flexWrap: 'wrap', marginBottom: 36,
             }}>
               <a
-                href="https://wa.me/2347026131523?text=MENU"
+                href="https://wa.me/2348143653652?text=MENU"
                 target="_blank" rel="noopener noreferrer"
                 className="btn btn-lime"
                 style={{ fontSize: '1rem', padding: '15px 32px', gap: 9 }}

@@ -70,7 +70,7 @@ export default function AssetCategories() {
               <span className="cmd">LISTINGS</span> on WhatsApp.
             </p>
             <a
-              href="https://wa.me/2347026131523?text=LISTINGS"
+              href="https://wa.me/2348143653652?text=LISTINGS"
               target="_blank" rel="noopener noreferrer"
               className="btn btn-lime"
             >

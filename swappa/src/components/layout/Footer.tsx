@@ -11,8 +11,8 @@ const NAV_COLS = [
     heading: 'Marketplace',
     links: [
       { label: 'Browse listings',       href: '#assets' },
-      { label: 'Sell an asset',         href: 'https://wa.me/2347026131523?text=SELL' },
-      { label: 'Request an asset',      href: 'https://wa.me/2347026131523?text=REQUEST' },
+      { label: 'Sell an asset',         href: 'https://wa.me/2348143653652?text=SELL' },
+      { label: 'Request an asset',      href: 'https://wa.me/2348143653652?text=REQUEST' },
       { label: 'How it works',          href: '#how-it-works' },
     ],
   },
@@ -43,7 +43,7 @@ const NAV_COLS = [
       { label: 'Safety policy',         href: '#' },
       { label: 'Terms of service',      href: '#' },
       { label: 'Privacy policy',        href: '#' },
-      { label: 'Contact us',            href: 'https://wa.me/2347026131523?text=HELP' },
+      { label: 'Contact us',            href: 'https://wa.me/2348143653652?text=HELP' },
     ],
   },
 ];
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
 
           <a
-            href="https://wa.me/2347026131523?text=MENU"
+            href="https://wa.me/2348143653652?text=MENU"
             target="_blank" rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
@@ -142,7 +142,7 @@ export default function Footer() {
                   {COMMANDS.map(cmd => (
                     <a
                       key={cmd}
-                      href={`https://wa.me/2347026131523?text=${encodeURIComponent(cmd.replace(' [ID]', ''))}`}
+                      href={`https://wa.me/2348143653652?text=${encodeURIComponent(cmd.replace(' [ID]', ''))}`}
                       target="_blank" rel="noopener noreferrer"
                       style={{
                         fontFamily: "'Courier New', monospace",
@@ -212,25 +212,7 @@ export default function Footer() {
             © {year} Swappa. All rights reserved.
           </span>
 
-          {/* Escrow badge row */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.3)', fontWeight: 500 }}>
-              Escrow via
-            </span>
-            {[
-              { label: 'Koji Agudah' },
-              { label: 'Nauman Chaudhary' },
-              { label: 'Swappa Native', highlight: true },
-            ].map(p => (
-              <span key={p.label} style={{
-                fontSize: '0.72rem', fontWeight: 700,
-                color: p.highlight ? 'var(--forest)' : 'rgba(255,255,255,0.45)',
-                background: p.highlight ? 'var(--lime)' : 'rgba(255,255,255,0.07)',
-                border: '1px solid ' + (p.highlight ? 'transparent' : 'rgba(255,255,255,0.1)'),
-                padding: '3px 10px', borderRadius: 100,
-              }}>{p.label}</span>
-            ))}
-          </div>
+         
         </div>
       </div>
 

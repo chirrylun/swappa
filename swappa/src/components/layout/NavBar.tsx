@@ -98,7 +98,7 @@ export default function Navbar() {
             </div>
 
             <a
-              href="https://wa.me/2347026131523?text=MENU"
+              href="https://wa.me/2348143653652?text=MENU"
               target="_blank" rel="noopener noreferrer"
               className="btn btn-lime"
               style={{ padding: '10px 22px', fontSize: '0.9rem' }}
@@ -145,7 +145,7 @@ export default function Navbar() {
               >{link.label}</a>
             ))}
             <a
-              href="https://wa.me/2347026131523?text=MENU"
+              href="https://wa.me/2348143653652?text=MENU"
               target="_blank" rel="noopener noreferrer"
               className="btn btn-lime"
               style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}

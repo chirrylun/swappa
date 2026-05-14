@@ -150,7 +150,7 @@ export default function HowItWorks() {
             <p className="anim-fade-up d-3" style={{ maxWidth: 460, color: 'var(--ink-2)', fontSize: '1rem', lineHeight: 1.8, margin: 0 }}>
               No apps to download. No dashboards to learn. Every step — browse, offer, negotiate, pay, confirm — runs through simple WhatsApp commands.
             </p>
-            <a href="https://wa.me/2347026131523?text=MENU" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/2348143653652?text=MENU" target="_blank" rel="noopener noreferrer"
               className="btn btn-forest anim-fade-up d-4">Try it now →</a>
           </div>
         </div>
@@ -305,7 +305,7 @@ export default function HowItWorks() {
               }}>Every command, at a glance</h3>
             </div>
             <a
-              href="https://wa.me/2347026131523?text=HELP"
+              href="https://wa.me/2348143653652?text=HELP"
               target="_blank" rel="noopener noreferrer"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
