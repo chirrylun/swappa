@@ -30,7 +30,7 @@ const TRUST_POINTS = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    num: "₦2.4B+",
+    num: "₦100M+",
     title: "Trusted by thousands",
     desc: "In deals completed safely across Nigeria — and growing.",
   },
@@ -49,7 +49,7 @@ const TRUST_POINTS = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    num: "99.1%",
+    num: "99.9%",
     title: "Escrow success rate",
     desc: "Every transaction is protected until both sides confirm.",
   },
@@ -68,7 +68,7 @@ const TRUST_POINTS = [
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
-    num: "8,200+",
+    num: "1000+",
     title: "Verified listings sold",
     desc: "Every asset reviewed by our team before it goes live.",
   },
@@ -88,7 +88,7 @@ const TRUST_POINTS = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    num: "< 2 min",
+    num: "< 1 second",
     title: "24/7 bot response",
     desc: "Disputes resolved within 48 hours by our admin team.",
   },

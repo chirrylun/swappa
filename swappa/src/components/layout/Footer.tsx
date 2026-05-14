@@ -26,6 +26,7 @@ const NAV_COLS = [
       { label: 'Social Accounts',       href: '#assets' },
     ],
   },
+  /*
   {
     heading: 'Escrow',
     links: [
@@ -36,6 +37,7 @@ const NAV_COLS = [
       { label: 'Dispute resolution',    href: '#escrow' },
     ],
   },
+  */
   {
     heading: 'Company',
     links: [
