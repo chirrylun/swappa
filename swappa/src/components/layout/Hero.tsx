@@ -33,40 +33,34 @@ export default function Hero() {
           {/* ── Left ── */}
           <div>
 
-            {/* Escrow strip — segmented pill */}
+            {/* Escrow strip — wraps cleanly on mobile */}
             <div className="anim-fade-up d-1" style={{
-              display: 'inline-flex',
-              alignItems: 'stretch',
-              background: 'var(--off)',
-              border: '1px solid var(--border)',
-              borderRadius: 100,
-              overflow: 'hidden',
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: 6,
               marginBottom: 32,
             }}>
               <span style={{
-                fontSize: '0.7rem', fontWeight: 700,
+                fontSize: '0.68rem', fontWeight: 700,
                 textTransform: 'uppercase', letterSpacing: '0.07em',
                 color: 'var(--ink-3)',
-                padding: '8px 16px',
-                display: 'flex', alignItems: 'center',
-                borderRight: '1px solid var(--border)',
                 whiteSpace: 'nowrap',
+                marginRight: 2,
               }}>Escrow via</span>
-
-              {PROVIDERS.map((p, i) => (
-                <span key={p.label} style={{
-                  fontSize: '0.74rem', fontWeight: 700,
-                  color: p.color,
-                  background: p.bg,
-                  padding: '8px 14px',
-                  display: 'flex', alignItems: 'center',
-                  borderRight: i < PROVIDERS.length - 1
-                    ? '1px solid rgba(255,255,255,0.14)'
-                    : 'none',
-                  whiteSpace: 'nowrap',
-                  letterSpacing: '-0.01em',
-                }}>{p.label}</span>
-              ))}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                {PROVIDERS.map(p => (
+                  <span key={p.label} style={{
+                    fontSize: '0.73rem', fontWeight: 700,
+                    color: p.color,
+                    background: p.bg,
+                    padding: '5px 12px',
+                    borderRadius: 100,
+                    whiteSpace: 'nowrap',
+                    letterSpacing: '-0.01em',
+                  }}>{p.label}</span>
+                ))}
+              </div>
             </div>
 
             {/* Headline */}
@@ -206,6 +200,9 @@ export default function Hero() {
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
           .hero-mockup-wrap { display: none !important; }
+        }
+        @media (max-width: 480px) {
+          .container { padding-left: 20px !important; padding-right: 20px !important; }
         }
       `}</style>
     </section>
