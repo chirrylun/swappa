@@ -38,7 +38,7 @@ const CATEGORIES = [
     tags: ["Brand", "Face value", "Region", "Currency"],
   },
   {
-    img: "/images/youtube-svg.svg",
+    img: "/images/twitter-svg.svg",
     name: "Twitter / X Accounts",
     count: "140+",
     desc: "Verified and unverified accounts. Niche-specific audiences. Monetized options.",
