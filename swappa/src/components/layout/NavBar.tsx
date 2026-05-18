@@ -43,29 +43,15 @@ export default function Navbar() {
           {/* ── Logo ── */}
           <Link href="/" style={{
             textDecoration: 'none',
-            display: 'flex', alignItems: 'center', gap: 10,
+            display: 'flex', alignItems: 'center', gap: 8,
           }}>
             {/*
-              Icon: white background pill so the green S sits cleanly on the navbar.
-              Size 36×36 matches the original rounded-square footprint.
+              Sizing via CSS class only — no width/height HTML attributes.
+              The browser applies CSS dimensions before layout so the SVG
+              viewBox can't override them. Icon 24px sq, text 15px tall.
             */}
-            <img
-              src="/images/swappa-icon.svg"
-              alt="Swappa icon"
-              width={26}
-              height={26}
-              style={{ display: 'block', flexShrink: 0 }}
-            />
-            {/*
-              Text logo: render at a natural height that matches the nav cap-height.
-              The SVG is dark green — no filter needed on the white navbar.
-            */}
-            <img
-              src="/images/swappa-text.svg"
-              alt="Swappa"
-              height={26}
-              style={{ display: 'block', flexShrink: 0 }}
-            />
+            <img src="/images/swappa-icon.svg" alt="" aria-hidden="true" className="swappa-logo-icon" />
+            <img src="/images/swappa-text.svg" alt="Swappa" className="swappa-logo-text" />
           </Link>
 
           {/* ── Desktop nav links ── */}
@@ -164,6 +150,23 @@ export default function Navbar() {
       </nav>
 
       <style>{`
+        /* ── Logo lockup sizing ──
+           CSS-only so the browser can't use SVG viewBox intrinsic size.
+           Icon: 24px square. Text: 15px tall, width auto (honours aspect ratio).
+           ~62% ratio gives optical balance between mark and wordmark. */
+        .swappa-logo-icon {
+          display: block;
+          height: 24px;
+          width: 24px;
+          flex-shrink: 0;
+        }
+        .swappa-logo-text {
+          display: block;
+          height: 15px;
+          width: auto;
+          flex-shrink: 0;
+        }
+
         @media (max-width: 768px) {
           .desktop-nav     { display: none !important; }
           .mobile-menu-btn { display: flex !important; }

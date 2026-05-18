@@ -128,41 +128,41 @@ export default function Hero() {
               background: '#e5ddd5',
             }}>
 
-              {/* Mockup chat header — uses actual SVG logo */}
+              {/* Mockup chat header */}
               <div style={{
                 background: 'var(--forest)',
-                padding: '16px 20px',
+                padding: '14px 18px',
                 display: 'flex', alignItems: 'center', gap: 12,
               }}>
-                {/* Icon */}
+                {/* Avatar */}
                 <div style={{
-                  width: 44, height: 44, borderRadius: '50%',
+                  width: 38, height: 38, borderRadius: '50%',
                   background: 'var(--lime)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0, overflow: 'hidden',
                 }}>
-                  <img
-                    src="/images/swappa-icon-white.svg"
-                    alt="Swappa"
-                    width={28}
-                    height={28}
-                    style={{ display: 'block' }}
-                  />
+                  {/*
+                    Avatar icon: 22px inside a 38px circle — fills it comfortably.
+                    CSS-only sizing.
+                  */}
+                  <img src="/images/swappa-icon-white.svg" alt="" className="swappa-mockup-avatar-icon" />
                 </div>
 
                 {/* Name + status */}
                 <div>
+                  {/*
+                    Mockup wordmark: white (via filter), height 12px.
+                    At this scale inside the mockup header, 12px sits flush
+                    with the "Market" label (0.7rem ≈ 11.2px) beside it.
+                    Gap 5px keeps them close without merging.
+                  */}
                   <div style={{
-                    display: 'flex', alignItems: 'center', gap: 6, marginBottom: 3,
+                    display: 'flex', alignItems: 'center', gap: 5, marginBottom: 3,
                   }}>
                     <img
                       src="/images/swappa-text.svg"
                       alt="Swappa"
-                      height={14}
-                      style={{
-                        display: 'block',
-                        filter: 'brightness(0) invert(1)',
-                      }}
+                      className="swappa-mockup-text"
                     />
                     <span style={{
                       color: 'rgba(255,255,255,0.6)', fontSize: '0.72rem', fontWeight: 500,
@@ -234,6 +234,21 @@ export default function Hero() {
       </div>
 
       <style>{`
+        /* ── Mockup header logo sizing (CSS-only) ──
+           Avatar icon: 22px inside the 38px circle.
+           Wordmark: 12px tall, white via filter, width auto. */
+        .swappa-mockup-avatar-icon {
+          display: block;
+          height: 22px;
+          width: 22px;
+        }
+        .swappa-mockup-text {
+          display: block;
+          height: 12px;
+          width: auto;
+          filter: brightness(0) invert(1);
+        }
+
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
           .hero-mockup-wrap { display: none !important; }

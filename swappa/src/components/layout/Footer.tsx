@@ -99,26 +99,16 @@ export default function Footer() {
 
             {/* ── Brand column ── */}
             <div>
-              {/* Logo: icon + text SVGs side by side */}
+              {/*
+                Footer logo: larger context so the lockup can breathe more.
+                Icon: 30px. Text: 19px tall — same ~63% ratio as navbar.
+                CSS-only sizing for reliability.
+              */}
               <div style={{
-                display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16,
+                display: 'flex', alignItems: 'center', gap: 9, marginBottom: 16,
               }}>
-                <img
-                  src="/images/swappa-icon.svg"
-                  alt="Swappa icon"
-                  width={32}
-                  height={32}
-                  style={{ display: 'block', flexShrink: 0 }}
-                />
-                <img
-                  src="/images/swappa-text-white.svg"
-                  alt="Swappa"
-                  height={20}
-                  style={{
-                    display: 'block',
-                 
-                  }}
-                />
+                <img src="/images/swappa-icon.svg" alt="" aria-hidden="true" className="swappa-footer-icon" />
+                <img src="/images/swappa-text-white.svg" alt="Swappa" className="swappa-footer-text" />
               </div>
 
               <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
@@ -209,6 +199,21 @@ export default function Footer() {
       </div>
 
       <style>{`
+        /* ── Footer logo sizing (CSS-only) ──
+           Icon 30px sq, text 19px tall — same ~63% ratio as the navbar lockup. */
+        .swappa-footer-icon {
+          display: block;
+          height: 30px;
+          width: 30px;
+          flex-shrink: 0;
+        }
+        .swappa-footer-text {
+          display: block;
+          height: 19px;
+          width: auto;
+          flex-shrink: 0;
+        }
+
         @media (max-width: 1024px) {
           .swappa-footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
         }
