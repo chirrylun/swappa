@@ -33,7 +33,7 @@ export default function Hero() {
           {/* ── Left ── */}
           <div>
 
-            {/* Escrow strip — wraps cleanly on mobile */}
+            {/* Escrow strip */}
             <div className="anim-fade-up d-1" style={{
               display: 'flex',
               alignItems: 'center',
@@ -127,26 +127,62 @@ export default function Hero() {
               boxShadow: '0 8px 48px rgba(0,0,0,0.10)',
               background: '#e5ddd5',
             }}>
+
+              {/* Mockup chat header — uses actual SVG logo */}
               <div style={{
                 background: 'var(--forest)',
                 padding: '16px 20px',
                 display: 'flex', alignItems: 'center', gap: 12,
               }}>
+                {/* Icon */}
                 <div style={{
                   width: 44, height: 44, borderRadius: '50%',
                   background: 'var(--lime)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '1.2rem',
-                }}>🛍️</div>
+                  flexShrink: 0, overflow: 'hidden',
+                }}>
+                  <img
+                    src="/images/swappa-icon-white.svg"
+                    alt="Swappa"
+                    width={28}
+                    height={28}
+                    style={{ display: 'block' }}
+                  />
+                </div>
+
+                {/* Name + status */}
                 <div>
-                  <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.93rem' }}>Swappa Market</div>
-                  <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 5 }}>
-                    <span style={{ width: 6, height: 6, background: 'var(--lime)', borderRadius: '50%', display: 'inline-block' }} />
+                  <div style={{
+                    display: 'flex', alignItems: 'center', gap: 6, marginBottom: 3,
+                  }}>
+                    <img
+                      src="/images/swappa-text.svg"
+                      alt="Swappa"
+                      height={14}
+                      style={{
+                        display: 'block',
+                        filter: 'brightness(0) invert(1)',
+                      }}
+                    />
+                    <span style={{
+                      color: 'rgba(255,255,255,0.6)', fontSize: '0.72rem', fontWeight: 500,
+                    }}>Market</span>
+                  </div>
+                  <div style={{
+                    color: 'rgba(255,255,255,0.55)', fontSize: '0.72rem',
+                    display: 'flex', alignItems: 'center', gap: 5,
+                  }}>
+                    <span style={{
+                      width: 6, height: 6,
+                      background: 'var(--lime)', borderRadius: '50%',
+                      display: 'inline-block',
+                    }} />
                     Online now
                   </div>
                 </div>
               </div>
 
+              {/* Chat body */}
               <div style={{ padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 10 }}>
                 <div style={{ maxWidth: 280 }}>
                   <div style={{ background: '#fff', borderRadius: '12px 12px 12px 2px', padding: '12px 14px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
@@ -186,6 +222,7 @@ export default function Hero() {
                 </div>
               </div>
 
+              {/* Mockup CTA */}
               <div style={{ padding: '12px 14px 14px', background: 'var(--off)', borderTop: '1px solid var(--border)' }}>
                 <div style={{ background: 'var(--lime)', color: 'var(--forest)', fontWeight: 700, fontSize: '0.88rem', textAlign: 'center', padding: '11px', borderRadius: 100, cursor: 'pointer' }}>
                   Start trading on WhatsApp →

@@ -28,7 +28,7 @@ export default function Navbar() {
     <>
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
-        background: scrolled ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.96)',
+        background: 'rgba(255,255,255,0.96)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         borderBottom: '1px solid var(--border)',
@@ -40,28 +40,35 @@ export default function Navbar() {
           justifyContent: 'space-between', height: 64,
         }}>
 
-          {/* Logo */}
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 9 }}>
-            <div style={{
-              width: 32, height: 32,
-              background: 'var(--forest)',
-              borderRadius: 8,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}>
-              {/* S wordmark */}
-              <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
-                <path d="M13 5.5C13 3.567 11.433 2 9.5 2H6C3.791 2 2 3.791 2 6s1.791 4 4 4h2c2.209 0 4 1.791 4 4s-1.791 4-4 4H5C3.343 16 2 14.657 2 13"
-                  stroke="var(--lime)" strokeWidth="2.2" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 800, fontSize: '1.1rem',
-              color: 'var(--black)', letterSpacing: '-0.03em',
-            }}>Swappa</span>
+          {/* ── Logo ── */}
+          <Link href="/" style={{
+            textDecoration: 'none',
+            display: 'flex', alignItems: 'center', gap: 10,
+          }}>
+            {/*
+              Icon: white background pill so the green S sits cleanly on the navbar.
+              Size 36×36 matches the original rounded-square footprint.
+            */}
+            <img
+              src="/images/swappa-icon.svg"
+              alt="Swappa icon"
+              width={26}
+              height={26}
+              style={{ display: 'block', flexShrink: 0 }}
+            />
+            {/*
+              Text logo: render at a natural height that matches the nav cap-height.
+              The SVG is dark green — no filter needed on the white navbar.
+            */}
+            <img
+              src="/images/swappa-text.svg"
+              alt="Swappa"
+              height={26}
+              style={{ display: 'block', flexShrink: 0 }}
+            />
           </Link>
 
-          {/* Desktop nav links */}
+          {/* ── Desktop nav links ── */}
           <div style={{ display: 'flex', gap: 2 }} className="desktop-nav">
             {NAV_LINKS.map(link => (
               <a
@@ -87,7 +94,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right side */}
+          {/* ── Right side ── */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <div style={{
               display: 'flex', alignItems: 'center', gap: 6,
@@ -125,7 +132,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* ── Mobile menu ── */}
         {mobileOpen && (
           <div style={{
             background: 'var(--white)',

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 858.02 185.53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #235743;
+        font-family: Poppins-SemiBold, Poppins;
+        font-size: 213.37px;
+        font-weight: 600;
+      }
+
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <g class="cls-2">
+    <text class="cls-1" transform="translate(-4.81 125.74)"><tspan x="0" y="0">swappa</tspan></text>
+  </g>
+</svg>

@@ -26,18 +26,6 @@ const NAV_COLS = [
       { label: 'Social Accounts',       href: '#assets' },
     ],
   },
-  /*
-  {
-    heading: 'Escrow',
-    links: [
-      { label: 'How escrow works',      href: '#escrow' },
-      { label: 'Koji Agudah Escrow',    href: '#escrow' },
-      { label: 'Nauman Chaudhary Escrow', href: '#escrow' },
-      { label: 'Swappa Native Escrow',  href: '#escrow' },
-      { label: 'Dispute resolution',    href: '#escrow' },
-    ],
-  },
-  */
   {
     heading: 'Company',
     links: [
@@ -109,24 +97,28 @@ export default function Footer() {
             gap: 48, alignItems: 'start',
           }} className="swappa-footer-grid">
 
-            {/* Brand column */}
+            {/* ── Brand column ── */}
             <div>
-              {/* Logo */}
+              {/* Logo: icon + text SVGs side by side */}
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16,
               }}>
-                <div style={{
-                  width: 36, height: 36, borderRadius: 10,
-                  background: 'var(--lime)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 900, fontSize: '0.95rem',
-                  color: 'var(--forest)',
-                  fontFamily: 'var(--font-display), system-ui, sans-serif',
-                  letterSpacing: '-0.02em',
-                }}>S</div>
-                <span style={{ color: '#fff', fontWeight: 800, fontSize: '1.1rem', letterSpacing: '-0.02em' }}>
-                  Swappa
-                </span>
+                <img
+                  src="/images/swappa-icon.svg"
+                  alt="Swappa icon"
+                  width={32}
+                  height={32}
+                  style={{ display: 'block', flexShrink: 0 }}
+                />
+                <img
+                  src="/images/swappa-text-white.svg"
+                  alt="Swappa"
+                  height={20}
+                  style={{
+                    display: 'block',
+                 
+                  }}
+                />
               </div>
 
               <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
@@ -213,8 +205,6 @@ export default function Footer() {
           <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>
             © {year} Swappa. All rights reserved.
           </span>
-
-         
         </div>
       </div>
 
