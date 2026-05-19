@@ -2,16 +2,15 @@ import type { Metadata, Viewport } from 'next'
 import { Geist } from 'next/font/google'
 import { Instrument_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 
-// Display / headings — tight, geometric, modern
 const geist = Geist({
   subsets: ['latin'],
   variable: '--font-display',
   weight: ['400', '500', '600', '700', '800', '900'],
 })
 
-// Body — warm, readable, slightly editorial
 const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
   variable: '--font-body',
@@ -42,7 +41,6 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    // Both CSS variables are injected here — available globally
     <html
       lang="en"
       className={`${geist.variable} ${instrumentSans.variable}`}
@@ -50,6 +48,35 @@ export default function RootLayout({
       <body className="antialiased min-h-screen">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        {/* Meta Pixel */}
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '25261984080087536');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=25261984080087536&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </body>
     </html>
   )
