@@ -10,35 +10,41 @@ const NAV_COLS = [
   {
     heading: 'Marketplace',
     links: [
-      { label: 'Browse listings',       href: '#assets' },
-      { label: 'Sell an asset',         href: 'https://wa.me/2348143653652?text=SELL' },
-      { label: 'Request an asset',      href: 'https://wa.me/2348143653652?text=REQUEST' },
-      { label: 'How it works',          href: '#how-it-works' },
+      { label: 'Browse listings',  href: '#assets' },
+      { label: 'Sell an asset',    href: 'https://wa.me/2348143653652?text=SELL' },
+      { label: 'Request an asset', href: 'https://wa.me/2348143653652?text=REQUEST' },
+      { label: 'How it works',     href: '#how-it-works' },
     ],
   },
   {
     heading: 'Asset categories',
     links: [
-      { label: 'Google Ads Accounts',   href: '#assets' },
-      { label: 'Facebook Ad Accounts',  href: '#assets' },
-      { label: 'AdSense Sites',         href: '#assets' },
-      { label: 'Gift Cards',            href: '#assets' },
-      { label: 'Social Accounts',       href: '#assets' },
+      { label: 'Google Ads Accounts',  href: '#assets' },
+      { label: 'Facebook Ad Accounts', href: '#assets' },
+      { label: 'AdSense Sites',        href: '#assets' },
+      { label: 'Gift Cards',           href: '#assets' },
+      { label: 'Social Accounts',      href: '#assets' },
     ],
   },
   {
     heading: 'Company',
     links: [
-      { label: 'About',                 href: '#' },
-      { label: 'Safety policy',         href: '#' },
-      { label: 'Terms of service',      href: '#' },
-      { label: 'Privacy policy',        href: '#' },
-      { label: 'Contact us',            href: 'https://wa.me/2348143653652?text=HELP' },
+      { label: 'About',           href: '#' },
+      { label: 'Safety policy',   href: '#' },
+      { label: 'Terms of service',href: '#' },
+      { label: 'Privacy policy',  href: '#' },
+      { label: 'Contact us',      href: 'https://wa.me/2348143653652?text=HELP' },
     ],
   },
 ];
 
 const COMMANDS = ['MENU', 'LISTINGS', 'SELL', 'BUY [ID]', 'HELP'];
+
+function trackLead() {
+  if (typeof window !== 'undefined' && (window as any).fbq) {
+    (window as any).fbq('track', 'Lead');
+  }
+}
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -64,13 +70,16 @@ export default function Footer() {
               Ready to trade?
             </h2>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.55)', margin: 0, maxWidth: 340 }}>
-              Open WhatsApp and type <span style={{ color: 'var(--lime)', fontFamily: 'monospace', fontWeight: 700 }}>MENU</span> to get started in seconds.
+              Open WhatsApp and type{' '}
+              <span style={{ color: 'var(--lime)', fontFamily: 'monospace', fontWeight: 700 }}>MENU</span>
+              {' '}to get started in seconds.
             </p>
           </div>
 
           <a
             href="https://wa.me/2348143653652?text=MENU"
             target="_blank" rel="noopener noreferrer"
+            onClick={trackLead}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
               background: 'var(--lime)', color: 'var(--forest)',
@@ -99,19 +108,15 @@ export default function Footer() {
 
             {/* ── Brand column ── */}
             <div>
-              {/*
-                Footer logo: larger context so the lockup can breathe more.
-                Icon: 30px. Text: 19px tall — same ~63% ratio as navbar.
-                CSS-only sizing for reliability.
-              */}
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: 9, marginBottom: 16,
-              }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 16 }}>
                 <img src="/images/swappa-icon.svg" alt="" aria-hidden="true" className="swappa-footer-icon" />
                 <img src="/images/swappa-text-white.svg" alt="Swappa" className="swappa-footer-text" />
               </div>
 
-              <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
+              <p style={{
+                fontSize: '0.85rem', lineHeight: 1.7,
+                color: 'rgba(255,255,255,0.45)', marginBottom: 24,
+              }}>
                 Nigeria's escrow marketplace for digital assets — entirely inside WhatsApp.
               </p>
 
@@ -119,8 +124,7 @@ export default function Footer() {
               <div style={{ marginBottom: 4 }}>
                 <div style={{
                   fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase',
-                  letterSpacing: '0.09em', color: 'var(--lime)',
-                  marginBottom: 10,
+                  letterSpacing: '0.09em', color: 'var(--lime)', marginBottom: 10,
                 }}>Quick commands</div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                   {COMMANDS.map(cmd => (
@@ -128,6 +132,7 @@ export default function Footer() {
                       key={cmd}
                       href={`https://wa.me/2348143653652?text=${encodeURIComponent(cmd.replace(' [ID]', ''))}`}
                       target="_blank" rel="noopener noreferrer"
+                      onClick={trackLead}
                       style={{
                         fontFamily: "'Courier New', monospace",
                         fontSize: '0.7rem', fontWeight: 600,
@@ -162,13 +167,17 @@ export default function Footer() {
                   textTransform: 'uppercase', letterSpacing: '0.09em',
                   color: 'var(--lime)', marginBottom: 18,
                 }}>{col.heading}</div>
-                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                <ul style={{
+                  listStyle: 'none', margin: 0, padding: 0,
+                  display: 'flex', flexDirection: 'column', gap: 12,
+                }}>
                   {col.links.map(link => (
                     <li key={link.label}>
                       <a
                         href={link.href}
                         target={link.href.startsWith('http') ? '_blank' : undefined}
                         rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        onClick={link.href.includes('wa.me') ? trackLead : undefined}
                         style={{
                           fontSize: '0.87rem', color: 'rgba(255,255,255,0.55)',
                           textDecoration: 'none', fontWeight: 500,
@@ -199,21 +208,8 @@ export default function Footer() {
       </div>
 
       <style>{`
-        /* ── Footer logo sizing (CSS-only) ──
-           Icon 30px sq, text 19px tall — same ~63% ratio as the navbar lockup. */
-        .swappa-footer-icon {
-          display: block;
-          height: 30px;
-          width: 30px;
-          flex-shrink: 0;
-        }
-        .swappa-footer-text {
-          display: block;
-          height: 19px;
-          width: auto;
-          flex-shrink: 0;
-        }
-
+        .swappa-footer-icon { display: block; height: 30px; width: 30px; flex-shrink: 0; }
+        .swappa-footer-text { display: block; height: 19px; width: auto; flex-shrink: 0; }
         @media (max-width: 1024px) {
           .swappa-footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
         }
