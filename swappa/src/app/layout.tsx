@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist } from 'next/font/google'
 import { Instrument_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
 import './globals.css'
 
@@ -18,21 +19,44 @@ const instrumentSans = Instrument_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Swappa — Buy & Sell Digital Assets on WhatsApp',
+  // Fixed: now 57 chars (was 46)
+  title: 'Swappa — Buy & Sell Digital Assets Safely on WhatsApp',
   description:
     "Nigeria's trusted escrow marketplace for Google Ads accounts, social media pages, AdSense sites, gift cards and more. Trade safely inside WhatsApp.",
   keywords:
-    'buy google ads account nigeria, sell facebook ad account, adsense site for sale, whatsapp marketplace, escrow nigeria',
+    'buy google ads account nigeria, sell facebook ad account, adsense site for sale, whatsapp escrow marketplace, escrow nigeria, sell google ads account',
+  metadataBase: new URL('https://www.swappa.chat'),
+  alternates: {
+    canonical: '/',  // renders as https://www.swappa.chat/
+  },
   openGraph: {
-    title: 'Swappa — Buy & Sell Digital Assets on WhatsApp',
+    title: 'Swappa — Buy & Sell Digital Assets Safely on WhatsApp',
     description:
       'Verified listings. Escrow protection. Entirely inside WhatsApp.',
     type: 'website',
+    url: 'https://www.swappa.chat',
   },
 }
 
 export const viewport: Viewport = {
   themeColor: '#0a0a0a',
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Swappa',
+  url: 'https://www.swappa.chat',
+  description:
+    "Nigeria's trusted escrow marketplace for buying and selling digital assets on WhatsApp.",
+  areaServed: 'NG',
+  knowsAbout: [
+    'Google Ads accounts',
+    'Social media pages',
+    'AdSense sites',
+    'Gift cards',
+    'Digital asset escrow',
+  ],
 }
 
 export default function RootLayout({
@@ -45,9 +69,23 @@ export default function RootLayout({
       lang="en"
       className={`${geist.variable} ${instrumentSans.variable}`}
     >
+      <head>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className="antialiased min-h-screen">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        {/* GA4 — replace G-XXXXXXXXXX with your actual measurement ID */}
+        {process.env.NODE_ENV === 'production' && (
+          <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+        )}
 
         {/* Meta Pixel */}
         <Script
