@@ -84,7 +84,7 @@ export default function RootLayout({
 
         {/* GA4 — replace G-XXXXXXXXXX with your actual measurement ID */}
         {process.env.NODE_ENV === 'production' && (
-          <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+          <GoogleAnalytics gaId="G-N22Z9J9JQ3" />
         )}
 
         {/* Meta Pixel */}

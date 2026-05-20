@@ -1,0 +1,5 @@
+# Swappa
+> Nigeria's escrow marketplace for buying and selling digital assets on WhatsApp
+
+## About
+Swappa enables safe peer-to-peer trades of Google Ads accounts, social media pages, AdSense sites, Youtube ad accounts and gift cards inside WhatsApp using escrow .
