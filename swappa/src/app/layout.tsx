@@ -139,22 +139,22 @@ export default function RootLayout({
       lang="en"
       className={`${geist.variable} ${instrumentSans.variable}`}
     >
-      <head>
-  <Script
+    <head>
+  <script
     id="organization-schema"
     type="application/ld+json"
     dangerouslySetInnerHTML={{
       __html: JSON.stringify(organizationSchema),
     }}
   />
-  <Script
+  <script
     id="website-schema"
     type="application/ld+json"
     dangerouslySetInnerHTML={{
       __html: JSON.stringify(websiteSchema),
     }}
   />
-  <Script
+  <script
     id="marketplace-schema"
     type="application/ld+json"
     dangerouslySetInnerHTML={{
