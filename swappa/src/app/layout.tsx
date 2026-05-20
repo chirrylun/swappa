@@ -20,21 +20,33 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   // Fixed: now 57 chars (was 46)
-  title: 'Swappa — Buy & Sell Digital Assets Safely on WhatsApp',
+  title: 'Swappa — Buy & Sell Google Ads, Social Media & Digital Assets in Nigeria',
   description:
-    "Nigeria's trusted escrow marketplace for Google Ads accounts, social media pages, AdSense sites, gift cards and more. Trade safely inside WhatsApp.",
+    "Nigeria's #1 escrow marketplace to buy and sell Google Ads accounts, Facebook ad accounts, AdSense sites, Play Console accounts, Instagram, TikTok & Twitter/X accounts safely on WhatsApp.",
   keywords:
     'buy google ads account, buy google ads account nigeria, sell google ads account, sell google ads account nigeria, buy facebook ad account, buy facebook ad account nigeria, sell facebook ad account, sell facebook ad account nigeria, buy adsense site, buy adsense site nigeria, sell adsense site, adsense site for sale nigeria, buy google play console account, buy google play console account nigeria, sell google play console account, google play developer account for sale nigeria, buy instagram account, buy instagram account nigeria, sell instagram account nigeria, buy twitter account, buy x account nigeria, sell twitter account nigeria, buy tiktok account, buy tiktok account nigeria, sell tiktok account nigeria, buy social media account nigeria, sell social media page nigeria, whatsapp escrow marketplace, escrow nigeria, escrow service nigeria, buy digital assets safely nigeria, sell digital assets nigeria, safe escrow whatsapp, trusted escrow nigeria',
   metadataBase: new URL('https://www.swappa.chat'),
-  alternates: {
-    canonical: '/',  // renders as https://www.swappa.chat/
-  },
+  alternates: { canonical: '/' },
   openGraph: {
-    title: 'Swappa — Buy & Sell Digital Assets Safely on WhatsApp',
+    title: 'Swappa — Buy & Sell Google Ads, Social Media & Digital Assets in Nigeria',
     description:
-      'Verified listings. Escrow protection. Entirely inside WhatsApp.',
+      'Verified listings. Escrow protection. Buy Google Ads accounts, Facebook ad accounts, AdSense sites and social media accounts safely inside WhatsApp.',
     type: 'website',
     url: 'https://www.swappa.chat',
+    images: [
+      {
+        url: 'https://www.swappa.chat/images/swappa-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Swappa — Buy and Sell Digital Assets Safely in Nigeria on WhatsApp',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Swappa — Buy & Sell Digital Assets in Nigeria',
+    description: 'Escrow-protected trades for Google Ads, social media accounts, AdSense sites and gift cards. Entirely inside WhatsApp.',
+    images: ['https://www.swappa.chat/images/swappa-og.png'],
   },
 }
 
@@ -47,16 +59,74 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Swappa',
   url: 'https://www.swappa.chat',
+  logo: 'https://www.swappa.chat/images/swappa-icon.svg',
   description:
     "Nigeria's trusted escrow marketplace for buying and selling digital assets on WhatsApp.",
   areaServed: 'NG',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    availableLanguage: 'English',
+    url: 'https://wa.me/2348143653652',
+  },
+  sameAs: [
+    'https://web.facebook.com/profile.php?id=61579138644345',
+    'https://www.instagram.com/swappa_ng',
+    'https://x.com/swappa_ng',
+    'https://www.linkedin.com/company/swappa-technologies',
+  ],
   knowsAbout: [
     'Google Ads accounts',
+    'Facebook Ad accounts',
+    'Google Play Console accounts',
     'Social media pages',
     'AdSense sites',
     'Gift cards',
     'Digital asset escrow',
   ],
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Swappa',
+  url: 'https://www.swappa.chat',
+  description: "Nigeria's escrow marketplace for digital assets on WhatsApp.",
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://wa.me/2348143653652?text=LISTINGS',
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+const marketplaceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Swappa Escrow Marketplace',
+  url: 'https://www.swappa.chat',
+  serviceType: 'Digital Asset Escrow Marketplace',
+  provider: {
+    '@type': 'Organization',
+    name: 'Swappa',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Nigeria',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Digital Assets',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Google Ads Accounts' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Facebook Ad Accounts' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Google Play Console Accounts' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'AdSense Sites' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Instagram Accounts' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Twitter / X Accounts' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'TikTok Accounts' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Gift Cards' } },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -70,14 +140,28 @@ export default function RootLayout({
       className={`${geist.variable} ${instrumentSans.variable}`}
     >
       <head>
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-      </head>
+  <Script
+    id="organization-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(organizationSchema),
+    }}
+  />
+  <Script
+    id="website-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(websiteSchema),
+    }}
+  />
+  <Script
+    id="marketplace-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(marketplaceSchema),
+    }}
+  />
+</head>
       <body className="antialiased min-h-screen">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

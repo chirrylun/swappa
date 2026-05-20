@@ -87,14 +87,13 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Headline */}
             <h1 className="anim-fade-up d-2" style={{ marginBottom: 24 }}>
-              Buy &amp; sell
-              <br />
-              digital assets
-              <br />
-              for less.
-            </h1>
+  Buy &amp; sell
+  <br />
+  digital accounts
+  <br />
+  in Nigeria.
+</h1>
 
             <p
               className="anim-fade-up d-3"
@@ -107,9 +106,9 @@ export default function Hero() {
                 marginBottom: 36,
               }}
             >
-              Trade Google Ads accounts, Meta pages, AdSense sites and social
-              accounts — protected by escrow, entirely inside WhatsApp.
-            </p>
+  Buy Google Ads accounts, Meta ad accounts, AdSense sites, Play Console accounts,
+  and social media pages — protected by escrow, entirely inside WhatsApp.
+</p>
 
             {/* CTAs */}
             <div
@@ -216,7 +215,7 @@ export default function Hero() {
                   */}
                   <img
                     src="/images/swappa-icon-white.svg"
-                    alt="Swappa icon white"
+                    alt="Swappa escrow marketplace Nigeria"
                     className="swappa-mockup-avatar-icon"
                   />
                 </div>
