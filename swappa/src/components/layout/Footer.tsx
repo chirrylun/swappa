@@ -109,7 +109,7 @@ export default function Footer() {
             {/* ── Brand column ── */}
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 16 }}>
-                <img src="/images/swappa-icon.svg" alt="" aria-hidden="true" className="swappa-footer-icon" />
+                <img src="/images/swappa-icon.svg" alt="Swappa icon white" aria-hidden="true" className="swappa-footer-icon" />
                 <img src="/images/swappa-text-white.svg" alt="Swappa" className="swappa-footer-text" />
               </div>
 

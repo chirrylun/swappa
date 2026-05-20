@@ -50,7 +50,7 @@ export default function Navbar() {
 
           {/* ── Logo ── */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <img src="/images/swappa-icon.svg" alt="" aria-hidden="true" className="swappa-logo-icon" />
+            <img src="/images/swappa-icon.svg" alt="Swappa icon white" aria-hidden="true" className="swappa-logo-icon" />
             <img src="/images/swappa-text.svg" alt="Swappa" className="swappa-logo-text" />
           </Link>
 
