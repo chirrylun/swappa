@@ -1,0 +1,66 @@
+# Swappa
+> Nigeria's trusted escrow marketplace for buying and selling digital assets safely on WhatsApp.
+
+Swappa is a peer-to-peer marketplace where Nigerians buy and sell digital assets with full escrow protection, entirely inside WhatsApp. No app download required. Every trade is mediated by a human escrow agent who holds funds until both parties confirm the deal is complete.
+
+## What You Can Buy or Sell on Swappa
+
+- **Google Ads accounts** — aged, verified, and ready-to-run accounts with billing history
+- **Google Play Console developer accounts** — individual and organization accounts
+- **AdSense sites** — monetized websites with verified AdSense approval
+- **Facebook ad accounts** — personal and Business Manager ad accounts
+- **Instagram accounts** — niche pages, aged accounts, and accounts with followers
+- **Twitter / X accounts** — verified and unverified accounts, aged handles
+- **TikTok accounts** — creator accounts and niche pages with existing audiences
+- **Social media pages** — Facebook pages, YouTube channels, and other platforms
+- **Gift cards** — trade gift cards safely with escrow protection
+
+## How Swappa Works
+
+1. **Browse or post a listing** — buyers find what they need, sellers list what they have
+2. **Agree on a price** — buyer and seller agree terms inside WhatsApp
+3. **Escrow is activated** — buyer sends payment to Swappa's escrow agent
+4. **Asset is transferred** — seller delivers the digital asset to the buyer
+5. **Payment is released** — once the buyer confirms receipt, Swappa releases funds to the seller
+6. **Trade complete** — both parties leave with what they came for
+
+## Why Swappa
+
+- Human escrow agent on every trade — not automated, not trustless
+- Entirely inside WhatsApp — no new app, no sign-up friction
+- Built for Nigeria — naira payments, Nigerian sellers and buyers
+- Verified listings — assets are checked before trades are confirmed
+- Dispute resolution — Swappa mediates if anything goes wrong
+
+## Who Uses Swappa
+
+- Digital marketers buying aged Google Ads or Facebook ad accounts
+- Developers acquiring Google Play Console accounts
+- Publishers buying AdSense-approved websites
+- Creators growing their presence by acquiring social media accounts
+- Anyone looking to sell a digital asset safely without getting scammed
+
+## Key Details
+
+- Website: https://www.swappa.chat
+- Location: Nigeria
+- Currency: Nigerian Naira (NGN)
+- Contact channel: WhatsApp
+- Escrow model: Human-mediated peer-to-peer
+
+## Frequently Asked Questions
+
+**Is Swappa safe?**
+Yes. Swappa holds the buyer's payment in escrow until the asset is successfully transferred. Neither party can run off with both the money and the asset.
+
+**Do I need to download an app?**
+No. Everything happens inside WhatsApp, which most Nigerian users already have.
+
+**What happens if there is a dispute?**
+Swappa's escrow agent steps in to mediate and resolve the issue fairly before funds are released.
+
+**What digital assets can I sell?**
+Google Ads accounts, Google Play Console accounts, AdSense sites, Facebook ad accounts, Instagram accounts, Twitter/X accounts, TikTok accounts, social media pages, and gift cards.
+
+**How long does a trade take?**
+Most trades complete within a few hours once both parties are ready and payment is confirmed.
