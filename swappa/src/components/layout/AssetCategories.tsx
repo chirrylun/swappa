@@ -82,23 +82,24 @@ export default function AssetCategories() {
           <div>
             <span className="section-label anim-fade-up">What we trade</span>
             <h2 className="anim-fade-up d-100">
-              8 asset categories,
-              <br />
-              hundreds of listings
-            </h2>
+  Buy &amp; sell social media
+  <br />
+  accounts and digital assets
+</h2>
           </div>
           <div className="anim-fade-up d-200" style={{ maxWidth: 340 }}>
-            <p
-              style={{
-                color: "var(--ink-2)",
-                fontSize: "0.95rem",
-                lineHeight: 1.75,
-                marginBottom: 20,
-              }}
-            >
-              Every listing is reviewed by our team before going live. Browse by
-              category or use <span className="cmd">LISTINGS</span> on WhatsApp.
-            </p>
+           <p
+  style={{
+    color: 'var(--ink-2)',
+    fontSize: '0.95rem',
+    lineHeight: 1.75,
+    marginBottom: 20,
+  }}
+>
+  Every social media account and digital asset listing is reviewed by
+  our team before going live. Browse by category or use{' '}
+  <span className="cmd">LISTINGS</span> on WhatsApp to buy instantly.
+</p>
             <a
               href="https://wa.me/2348143653652?text=LISTINGS"
               target="_blank"

@@ -159,23 +159,25 @@ export default function TickerStats() {
             {/* Left: headline + first trust point large */}
             <div className="anim-fade-up d-1">
               <h2 style={{ marginBottom: 24, lineHeight: 1.0 }}>
-                Safe trades.
-                <br />
-                Every time.
-              </h2>
+  Nigeria's #1 place
+  <br />
+  to buy social media
+  <br />
+  &amp; digital accounts.
+</h2>
               <p
-                style={{
-                  fontSize: "1rem",
-                  color: "var(--ink-2)",
-                  lineHeight: 1.8,
-                  maxWidth: 380,
-                  marginBottom: 40,
-                }}
-              >
-                Swappa combines verified listings, multi-provider escrow, and a
-                WhatsApp-native experience so you never have to worry about
-                who's on the other side of the deal.
-              </p>
+  style={{
+    fontSize: '1rem',
+    color: 'var(--ink-2)',
+    lineHeight: 1.8,
+    maxWidth: 380,
+    marginBottom: 40,
+  }}
+>
+  Whether you're buying social media accounts, digital ad accounts, or
+  monetized assets — Swappa protects every trade with escrow so you
+  never have to worry about who's on the other side of the deal.
+</p>
 
               {/* Escrow provider strip */}
               <div

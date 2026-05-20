@@ -90,24 +90,25 @@ export default function Hero() {
             <h1 className="anim-fade-up d-2" style={{ marginBottom: 24 }}>
   Buy &amp; sell
   <br />
-  digital accounts
+  social media
   <br />
-  in Nigeria.
+  &amp; digital accounts.
 </h1>
 
             <p
-              className="anim-fade-up d-3"
-              style={{
-                fontSize: "1.1rem",
-                color: "var(--ink-2)",
-                maxWidth: 420,
-                lineHeight: 1.75,
-                fontWeight: 400,
-                marginBottom: 36,
-              }}
-            >
-  Buy Google Ads accounts, Meta ad accounts, AdSense sites, Play Console accounts,
-  and social media pages — protected by escrow, entirely inside WhatsApp.
+  className="anim-fade-up d-3"
+  style={{
+    fontSize: '1.1rem',
+    color: 'var(--ink-2)',
+    maxWidth: 420,
+    lineHeight: 1.75,
+    fontWeight: 400,
+    marginBottom: 36,
+  }}
+>
+  Buy social media accounts and digital assets safely in Nigeria —
+  Instagram, TikTok, Twitter/X, Google Ads, Facebook ad accounts,
+  AdSense sites and more. Escrow-protected, entirely inside WhatsApp.
 </p>
 
             {/* CTAs */}

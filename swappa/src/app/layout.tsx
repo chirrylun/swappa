@@ -48,6 +48,14 @@ export const metadata: Metadata = {
     description: 'Escrow-protected trades for Google Ads, social media accounts, AdSense sites and gift cards. Entirely inside WhatsApp.',
     images: ['https://www.swappa.chat/images/swappa-og.png'],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/swappa-icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/images/swappa-icon.svg',
+    shortcut: '/favicon.ico',
+  },
 }
 
 export const viewport: Viewport = {
