@@ -216,7 +216,7 @@ export default function Hero() {
                   */}
                   <img
                     src="/images/swappa-icon-white.svg"
-                    alt=""
+                    alt="Swappa icon white"
                     className="swappa-mockup-avatar-icon"
                   />
                 </div>
