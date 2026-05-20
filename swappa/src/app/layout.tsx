@@ -105,27 +105,22 @@ const marketplaceSchema = {
   name: 'Swappa Escrow Marketplace',
   url: 'https://www.swappa.chat',
   serviceType: 'Digital Asset Escrow Marketplace',
+  description:
+    "Nigeria's trusted escrow marketplace for buying and selling Google Ads accounts, Facebook ad accounts, AdSense sites, Play Console accounts, Instagram, TikTok and Twitter/X accounts safely on WhatsApp.",
   provider: {
     '@type': 'Organization',
     name: 'Swappa',
+    url: 'https://www.swappa.chat',
   },
   areaServed: {
     '@type': 'Country',
     name: 'Nigeria',
   },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Digital Assets',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Google Ads Accounts' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Facebook Ad Accounts' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Google Play Console Accounts' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'AdSense Sites' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Instagram Accounts' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Twitter / X Accounts' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'TikTok Accounts' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Gift Cards' } },
-    ],
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    serviceUrl: 'https://wa.me/2348143653652',
+    servicePhone: '+2348143653652',
+    availableLanguage: 'English',
   },
 }
 
