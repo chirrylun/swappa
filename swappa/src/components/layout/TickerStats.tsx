@@ -175,8 +175,10 @@ export default function TickerStats() {
   }}
 >
   Whether you're buying social media accounts, digital ad accounts, or
-  monetized assets — Swappa protects every trade with escrow so you
-  never have to worry about who's on the other side of the deal.
+monetized assets, Swappa protects every trade with escrow. That way,
+you never have to worry about who's on the other side of the deal.
+Every listing is verified by our team before it goes live,
+so you always know what you're getting.
 </p>
 
               {/* Escrow provider strip */}

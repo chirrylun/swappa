@@ -68,7 +68,8 @@ const NAV_COLS = [
   {
     heading: 'Company',
     links: [
-      { label: 'About',            href: '#' },
+      
+      { label: 'FAQ', href: '/faq' },
       { label: 'Safety policy',    href: '#' },
       { label: 'Terms of service', href: '#' },
       { label: 'Privacy policy',   href: '#' },
@@ -281,6 +282,17 @@ export default function Footer() {
             © {year} Swappa. All rights reserved.
           </span>
         </div>
+        {/* E-E-A-T: visible author + date for crawlers */}
+<p style={{
+  fontSize: '0.72rem',
+  color: 'rgba(255,255,255,0.25)',
+  marginTop: 8,
+}}>
+  Published by <span itemProp="author">Swappa Technologies</span>.
+  Last updated: <time dateTime={new Date().toISOString().split('T')[0]}>
+    {new Date().toLocaleDateString('en-NG', { year: 'numeric', month: 'long' })}
+  </time>
+</p>
       </div>
 
       <style>{`

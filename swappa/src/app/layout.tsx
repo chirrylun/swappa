@@ -20,7 +20,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   // Fixed: now 57 chars (was 46)
-  title: 'Swappa — Buy & Sell Google Ads, Social Media & Digital Assets in Nigeria',
+  title: 'Swappa — Buy & Sell Digital Accounts in Nigeria',
   description:
     "Nigeria's #1 escrow marketplace to buy and sell Google Ads accounts, Facebook ad accounts, AdSense sites, Play Console accounts, Instagram, TikTok & Twitter/X accounts safely on WhatsApp.",
   keywords:
@@ -132,6 +132,58 @@ const marketplaceSchema = {
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How does Swappa escrow work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'When you buy on Swappa, your payment is held in escrow until you confirm you have access to the asset. Only then is the seller paid. If anything goes wrong, our team resolves disputes within 48 hours.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What digital assets can I buy on Swappa?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You can buy Google Ads accounts, Facebook ad accounts, AdSense sites, Google Play Console accounts, Instagram accounts, TikTok accounts, Twitter/X accounts, and gift cards — all verified before listing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Swappa safe for buying and selling in Nigeria?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every transaction is escrow-protected and every listing is reviewed by our admin team before going live. We operate entirely inside WhatsApp for convenience and accountability.',
+      },
+    },
+  ],
+}
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Swappa — Buy & Sell Digital Assets in Nigeria',
+  url: 'https://www.swappa.chat',
+  datePublished: '2025-01-01',
+  dateModified: new Date().toISOString().split('T')[0], // dynamic, always today
+  author: {
+    '@type': 'Organization',
+    name: 'Swappa',
+    url: 'https://www.swappa.chat',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Swappa',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.swappa.chat/images/swappa-icon.svg',
+    },
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -163,7 +215,19 @@ export default function RootLayout({
     dangerouslySetInnerHTML={{
       __html: JSON.stringify(marketplaceSchema),
     }}
+    
+    
   />
+  <script
+  id="faq-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+/>
+<script
+  id="webpage-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+/>
 </head>
       <body className="antialiased min-h-screen">
         {children}

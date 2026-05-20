@@ -159,7 +159,9 @@ export default function HowItWorks() {
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20 }}>
             <p className="anim-fade-up d-3" style={{ maxWidth: 460, color: 'var(--ink-2)', fontSize: '1rem', lineHeight: 1.8, margin: 0 }}>
-              No apps to download. No dashboards to learn. Every step — browse, offer, negotiate, pay, confirm — runs through simple WhatsApp commands.
+             There are no apps to download and no dashboards to learn. Instead, every
+step — from browsing to closing the deal — runs through simple WhatsApp
+commands. In other words, if you can send a message, you can trade on Swappa.
             </p>
             <a href="https://wa.me/2348143653652?text=MENU" target="_blank" rel="noopener noreferrer"
               className="btn btn-forest anim-fade-up d-4">Try it now →</a>
