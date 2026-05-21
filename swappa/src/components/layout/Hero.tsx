@@ -95,7 +95,6 @@ export default function Hero() {
   <br />
   safely.
 </h1>
-</h1>
 
             <p
   className="anim-fade-up d-3"
