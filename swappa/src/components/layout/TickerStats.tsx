@@ -159,11 +159,11 @@ export default function TickerStats() {
             {/* Left: headline + first trust point large */}
             <div className="anim-fade-up d-1">
               <h2 style={{ marginBottom: 24, lineHeight: 1.0 }}>
-  Nigeria's #1 place
+   Nigeria's #1 escrow
   <br />
-  to buy social media
+  marketplace to buy
   <br />
-  &amp; digital accounts.
+  &amp; sell digital accounts.
 </h2>
               <p
   style={{
@@ -174,11 +174,10 @@ export default function TickerStats() {
     marginBottom: 40,
   }}
 >
-  Whether you're buying social media accounts, digital ad accounts, or
-monetized assets, Swappa protects every trade with escrow. That way,
-you never have to worry about who's on the other side of the deal.
-Every listing is verified by our team before it goes live,
-so you always know what you're getting.
+  Whether you're buying Google Ads accounts, Facebook ad accounts,
+social media pages, or monetized assets in Nigeria — Swappa protects
+every trade with escrow so you never have to worry about who's on the
+other side of the deal.
 </p>
 
               {/* Escrow provider strip */}

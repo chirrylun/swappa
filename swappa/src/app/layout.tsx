@@ -20,10 +20,9 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   // Fixed: now 57 chars (was 46)
-  title: 'Swappa — Buy & Sell Digital Accounts in Nigeria',
-  description:
-    "Nigeria's #1 escrow marketplace to buy and sell Google Ads accounts, Facebook ad accounts, AdSense sites, Play Console accounts, Instagram, TikTok & Twitter/X accounts safely on WhatsApp.",
-  keywords:
+  title: 'Swappa — Buy & Sell Digital Accounts Safely in Nigeria',
+ description: 'Nigeria\'s #1 escrow marketplace to buy and sell Google Ads accounts, Facebook ad accounts, social media accounts and digital assets safely on WhatsApp.',
+ keywords:
     'buy google ads account, buy google ads account nigeria, sell google ads account, sell google ads account nigeria, buy facebook ad account, buy facebook ad account nigeria, sell facebook ad account, sell facebook ad account nigeria, buy adsense site, buy adsense site nigeria, sell adsense site, adsense site for sale nigeria, buy google play console account, buy google play console account nigeria, sell google play console account, google play developer account for sale nigeria, buy instagram account, buy instagram account nigeria, sell instagram account nigeria, buy twitter account, buy x account nigeria, sell twitter account nigeria, buy tiktok account, buy tiktok account nigeria, sell tiktok account nigeria, buy social media account nigeria, sell social media page nigeria, whatsapp escrow marketplace, escrow nigeria, escrow service nigeria, buy digital assets safely nigeria, sell digital assets nigeria, safe escrow whatsapp, trusted escrow nigeria',
   metadataBase: new URL('https://www.swappa.chat'),
   alternates: { canonical: '/' },

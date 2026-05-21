@@ -88,11 +88,13 @@ export default function Hero() {
             </div>
 
             <h1 className="anim-fade-up d-2" style={{ marginBottom: 24 }}>
+ <h1>
   Buy &amp; sell
   <br />
-  social media
+  digital accounts
   <br />
-  &amp; digital accounts.
+  safely.
+</h1>
 </h1>
 
             <p
